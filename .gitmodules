@@ -1,0 +1,4 @@
+[submodule "nuwa-skill"]
+	path = nuwa-skill
+	url = https://github.com/alchaincyf/nuwa-skill.git
+	branch = main
