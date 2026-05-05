@@ -1,0 +1,16 @@
+.DS_Store
+
+# Local OpenClaw runtime state inside the workspace
+.openclaw/
+
+# Personal or machine-local notes
+memory/
+
+# Local editor / OS noise
+.idea/
+.vscode/
+
+# Logs or temp artifacts
+*.log
+*.tmp
+
