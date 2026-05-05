@@ -1,0 +1,4384 @@
+[
+  {
+    "case_id": "鳌烨101",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨101",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 32,
+        "birth_year": 1994,
+        "location": {
+          "city": "纽约",
+          "tier": "overseas"
+        },
+        "education": "硕士（新闻/媒体方向）",
+        "career": {
+          "primary": "新闻媒体人",
+          "tags": [
+            "绿卡",
+            "海归",
+            "独立女性"
+          ]
+        },
+        "financials": {
+          "annual_income_fixed": 450000,
+          "assets_desc": "名下有房，有独立存款，家庭资产A8.5级别",
+          "income_tier": "A8.5"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "weight_kg": 56,
+          "appearance_comment": "有健身习惯，有明显文身，整体风格偏‘飒’",
+          "style_tag": "modern_cool"
+        },
+        "family": {
+          "background_desc": "从马来西亚移居美国，靠个人努力获得绿卡，背景深厚"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找文化同频、能接住梗的ABC或精英华人，消费观一致，渴望有传统根基的婚姻。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨102",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨102",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 33,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "博士（韩国成均馆大学）",
+        "career": {
+          "primary": "高校教师",
+          "tags": [
+            "高知",
+            "事业编",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "annual_income_fixed": 250000,
+          "assets_desc": "名下全款房、宝马3系，老家有多套门面房，家境极佳",
+          "income_tier": "A8"
+        },
+        "physicals": {
+          "appearance_comment": "颜值中位数以下，自述追求者众（认知偏差）",
+          "style_tag": "academic_plain"
+        },
+        "family": {
+          "is_only_child": true,
+          "background_desc": "家风严谨，经济无忧"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找学术能力强、门当户对的男性。对低成本情感付出有较强依赖感。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨103",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨103",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 34,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "大专",
+        "career": {
+          "primary": "管理/商贸",
+          "tags": [
+            "高收入",
+            "离异带娃",
+            "心理紧绷"
+          ]
+        },
+        "financials": {
+          "annual_income_fixed": 550000,
+          "assets_desc": "经济实力强，同龄人中的高收入者",
+          "income_tier": "A7.5"
+        },
+        "physicals": {
+          "height_cm": 180,
+          "appearance_comment": "外形好，有抽烟习惯",
+          "style_tag": "mature_business"
+        },
+        "family": {
+          "background_desc": "离异，育有一名8岁女儿，前妻因原则问题净身出户"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "希望能找到合适的伴侣重新开始，不排斥对方有婚史，但内心防御心理极强。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨104",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨104",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场上升期",
+          "tags": [
+            "草根逆袭",
+            "生存韧性",
+            "原生家庭重担"
+          ]
+        },
+        "financials": {
+          "assets_desc": "无家庭助力，全靠个人努力，家境极差",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 150,
+          "appearance_comment": "形象管理好，有健身习惯，身高是短板",
+          "style_tag": "energetic_petite"
+        },
+        "family": {
+          "background_desc": "重男轻女，有个小19岁的弟弟，家庭黑洞巨大"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "担心自身条件无竞争力，渴望避风港，对婚恋感到动摇。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨105",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨105",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内",
+          "tier": "tier_2_or_3"
+        },
+        "education": "大专（财务）",
+        "career": {
+          "primary": "家族生意辅助",
+          "tags": [
+            "母胎单身",
+            "眼高手低",
+            "挑剔"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家庭经营装修生意，家境尚可",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 158,
+          "appearance_comment": "颜值处于同龄人末尾数（红娘评）",
+          "style_tag": "ordinary"
+        },
+        "family": {
+          "background_desc": "三个孩子，父母经营生意，经济基础稳定"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "对身高和经济有执念，拒绝过在西安有房无贷的男生（理由是165cm）。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨106",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨106",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "宁波",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "三甲医院医生",
+          "tags": [
+            "绩优股",
+            "寒门贵子",
+            "坚韧沉稳"
+          ]
+        },
+        "financials": {
+          "annual_income_fixed": 150000,
+          "assets_desc": "个人存款15万，老家两套房，父亲货车司机",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "眼神真诚，有亲和力，气质沉稳",
+          "style_tag": "honest_doctor"
+        },
+        "family": {
+          "background_desc": "寒门出身，父为司机，通过个人努力实现跨越"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求家境稳健、性格温和的女性，看重性格契合。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨107",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨107",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 32,
+        "birth_year": 1994,
+        "location": {
+          "city": "海口",
+          "tier": "tier_2"
+        },
+        "education": "985硕士",
+        "career": {
+          "primary": "职场精英",
+          "tags": [
+            "高收入",
+            "单纯",
+            "钝感"
+          ]
+        },
+        "financials": {
+          "annual_income_fixed": 300000,
+          "assets_desc": "全款房（130万）、全款车（30万）",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "appearance_comment": "面容姣好（80分），性格爽朗",
+          "style_tag": "smart_plain"
+        },
+        "family": {
+          "background_desc": "独立性强，家境曾好目前一般"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找收入比自己高（40万+）、逻辑简单、真诚直球的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨108",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨108",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "杭州",
+          "tier": "tier_1"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "项目经理",
+          "tags": [
+            "独生子",
+            "人才计划",
+            "救赎者心态"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下两套全款房（杭州/成都），资产A7.5级别",
+          "income_tier": "A7.5"
+        },
+        "physicals": {
+          "appearance_comment": "谈吐得体，是颜控",
+          "style_tag": "gentle_rich"
+        },
+        "family": {
+          "background_desc": "父退休军官，母退休财务，出身温室"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "追求理想主义爱情。同时也想向上社交寻找更富有的家庭，逻辑混乱。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨109",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨109",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 34,
+        "birth_year": 1990,
+        "location": {
+          "city": "南京",
+          "tier": "tier_2"
+        },
+        "education": "博士",
+        "career": {
+          "primary": "科研/学术",
+          "tags": [
+            "高颜值博士",
+            "生育焦虑",
+            "感性觉醒"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境一般，父母离异",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "颜值极高，气质出众（博士圈顶配）",
+          "style_tag": "elegant_scholar"
+        },
+        "family": {
+          "background_desc": "养宠物激发母性，目前有迫切生育诉求"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "倾向‘温柔陪伴型’同龄男。追求情绪价值和浪漫。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨110",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨110",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "辽宁小城市",
+          "tier": "tier_4_or_5"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "照骗",
+            "相亲狂魔"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，父母退休金，无负担",
+          "income_tier": "B (Local T1)"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "真实长相潦草显老（40+岁感），美颜照片诈骗",
+          "style_tag": "unkempt_official"
+        },
+        "family": {
+          "background_desc": "体制内家庭，相亲60次全部失败"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "拒绝护士柜员，不接受纹身，自认硬件无懈可击。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨111",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨111",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "北京",
+          "tier": "tier_1"
+        },
+        "education": "北京大学硕士",
+        "career": {
+          "primary": "体制内",
+          "secondary": "北京户口",
+          "tags": [
+            "高知寒门",
+            "潜力股",
+            "紧绷感"
+          ]
+        },
+        "financials": {
+          "assets_desc": "无房产助力，靠个人攒钱",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "颜值在大众中不突出",
+          "style_tag": "serious_scholar"
+        },
+        "family": {
+          "background_desc": "普通县城家庭，无背景"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求在北京扎根，渴望高匹配度但受限于房产。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨112",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨112",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "天津（目前在德国）",
+          "tier": "tier_2"
+        },
+        "education": "欧洲音乐博士在读",
+        "career": {
+          "primary": "艺术学术",
+          "tags": [
+            "高知纯良",
+            "边界感强",
+            "焦虑提前"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境好，无经济负担",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 168,
+          "appearance_comment": "颜值极高，气质高雅",
+          "style_tag": "elegant_artist"
+        },
+        "family": {
+          "background_desc": "独生女，普通工程师家庭"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "担心回国后竞争力下滑，提前布局天津市场。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨113",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨113",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "温和",
+            "无上进心",
+            "安稳"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭无负担",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "外貌中等，谈吐温和",
+          "style_tag": "quiet_official"
+        },
+        "family": {
+          "background_desc": "父母均退休，家庭氛围好"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样安稳、不折腾的女性，渴望过平静的小日子。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨114",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨114",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 29,
+        "birth_year": 1995,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场精英",
+          "tags": [
+            "奋斗者",
+            "高负债",
+            "原生家庭阴影"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下两套房，均有高额房贷，经济压力巨大",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "精干，气质硬朗",
+          "style_tag": "tough_professional"
+        },
+        "family": {
+          "background_desc": "家境差，父母无退休金，全靠个人供养"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "渴望另一半能分担经济压力，提供情绪价值。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨115",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨115",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 29,
+        "birth_year": 1995,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "工程师",
+          "tags": [
+            "踏实",
+            "理工男",
+            "缺乏经验"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人攒钱买房，家庭无助力",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "外貌平平，不善言辞",
+          "style_tag": "tech_guy"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持度有限"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格好、能一起过日子的女孩。对颜值无执念。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨116",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨116",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "金融行业",
+          "tags": [
+            "精致",
+            "追求品味",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪，个人名下有房，消费水平高",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值高，打扮精致",
+          "style_tag": "urban_chic"
+        },
+        "family": {
+          "background_desc": "家境良好，父母对其期望高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找品味相当、能共同提升生活质量的男性。拒绝‘土气’。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨117",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨117",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "研发人员",
+          "tags": [
+            "高压",
+            "内向",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪但无房，目前处于首付积累阶段",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "书生气，略显疲惫",
+          "style_tag": "workaholic_scholar"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持力度较小"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找温柔体贴、能理解其工作压力的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨118",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨118",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自由职业",
+          "tags": [
+            "活泼",
+            "不确定性",
+            "社交广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "收入不稳定，目前无大额资产",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 162,
+          "appearance_comment": "外向型美女，社交属性强",
+          "style_tag": "vibrant_influencer"
+        },
+        "family": {
+          "background_desc": "家庭氛围宽松，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能玩到一块儿的伴侣。拒绝沉闷的体制内。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨119",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨119",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 35,
+        "birth_year": 1989,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "小私企老板",
+          "tags": [
+            "奋斗",
+            "务实",
+            "离异无孩"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款，现金流稳定",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "外形成熟稳重，略显老成",
+          "style_tag": "pragmatic_businessman"
+        },
+        "family": {
+          "background_desc": "离异无孩，父母已退休，家庭无负担"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能持家的女性，最好能共同经营家庭生活。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨120",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨120",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士在读",
+        "career": {
+          "primary": "学生",
+          "tags": [
+            "清纯",
+            "有灵气",
+            "寻求庇护"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境普通，目前无个人资产",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值极高，有初恋感",
+          "style_tag": "pure_innocence"
+        },
+        "family": {
+          "background_desc": "普通工薪家庭，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能提供稳定经济支持和生活引导的成熟男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨121",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨121",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 35,
+        "birth_year": 1989,
+        "location": {
+          "city": "国内（一线）",
+          "tier": "tier_1"
+        },
+        "education": "博士",
+        "career": {
+          "primary": "科研单位",
+          "tags": [
+            "高知",
+            "严谨",
+            "生育倒计时"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，高薪，经济独立",
+          "income_tier": "A7.5"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "书卷气重，气质沉稳",
+          "style_tag": "senior_academic"
+        },
+        "family": {
+          "background_desc": "知识分子家庭，父母支持度高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找认知同频、能理解科研节奏的男性。对生育有一定焦虑。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨122",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨122",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 32,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "销售总监",
+          "tags": [
+            "高压",
+            "高薪",
+            "社交广泛"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有两套房，车产丰厚，现金流大",
+          "income_tier": "A7.5"
+        },
+        "physicals": {
+          "height_cm": 182,
+          "appearance_comment": "谈吐幽默，外形有攻击性",
+          "style_tag": "aggressive_sales"
+        },
+        "family": {
+          "background_desc": "家境普通，全靠个人打拼实现财富积累"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个颜值高、能带得出去、且能包容其工作繁忙的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨123",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨123",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自媒体运营",
+          "tags": [
+            "活泼",
+            "有想法",
+            "社交圈广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人攒钱买车，名下无房，收入浮动大",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值处于高位，性格古灵精怪",
+          "style_tag": "quirky_creative"
+        },
+        "family": {
+          "background_desc": "普通中产家庭，父母思想开放"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能接住梗、且有一定的经济基础支持其折腾的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨124",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨124",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "温顺",
+            "家庭听命者"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭资产底子厚",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "submissive_official"
+        },
+        "family": {
+          "background_desc": "典型强势家庭。母亲掌握绝对话语权，本人性格软弱。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样体制内、能被母亲认可的女性。缺乏个人独立主张。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨125",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨125",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "小企业财务",
+          "tags": [
+            "勤恳",
+            "负担重",
+            "渴望安定"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下无资产，收入较低，全数补贴家用",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 158,
+          "appearance_comment": "五官端正，穿着朴素",
+          "style_tag": "plain_worker"
+        },
+        "family": {
+          "background_desc": "家境极差。父母务农，弟弟尚在读书，急需经济支撑。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "希望能找到一个能体谅其家庭负担、愿意提供彩礼及后续支持的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨126",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨126",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 33,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "创业者",
+          "tags": [
+            "高风险",
+            "高收益",
+            "精力旺盛"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下多套房产，但负债率也高，现金流波动大",
+          "income_tier": "A8"
+        },
+        "physicals": {
+          "height_cm": 180,
+          "appearance_comment": "外形成熟，有领导力，略显油腻",
+          "style_tag": "energetic_entrepreneur"
+        },
+        "family": {
+          "background_desc": "离异无孩，父母均在经商"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个能在事业上提供助力、或能完美照顾家庭的女性。拒绝‘傻白甜’。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨127",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨127",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "高校行政",
+          "tags": [
+            "安稳",
+            "高雅",
+            "追求精神共鸣"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，收入稳定，家境优渥",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 163,
+          "appearance_comment": "气质出众，书卷气浓",
+          "style_tag": "graceful_academic"
+        },
+        "family": {
+          "background_desc": "书香门第，父母均为教授，独生女"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找认知同频、有才华且性格儒雅的男性。拒绝‘暴发户’和‘粗鲁人’。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨128",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨128",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 42,
+        "birth_year": 1982,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "企业高管",
+          "tags": [
+            "稳重",
+            "多金",
+            "渴望孩子"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下多套房产，财富自由级别",
+          "income_tier": "A8.5"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，略显疲态，谈吐极具深度",
+          "style_tag": "senior_executive"
+        },
+        "family": {
+          "background_desc": "离异无孩，目前急于组建家庭并生育"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找年轻、健康、学历背景好的女性。能接受大年龄差。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨129",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨129",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 24,
+        "birth_year": 2000,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "刚入职场",
+          "tags": [
+            "清纯",
+            "有潜力",
+            "极度自卑"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下无资产，月薪较低，需补贴家里",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "颜值处于高位，初恋脸",
+          "style_tag": "fragile_beauty"
+        },
+        "family": {
+          "background_desc": "家境极差，父母患病，背负一定的债务"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能替其承担家庭债务、提供生活庇护的男性。对年龄无要求。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨130",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨130",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自媒体创作者",
+          "tags": [
+            "有趣",
+            "变动性大",
+            "高情感价值"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，收入波动大，目前处于事业上升期",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 180,
+          "appearance_comment": "阳光帅气，谈吐富有感染力",
+          "style_tag": "vibrant_content_creator"
+        },
+        "family": {
+          "background_desc": "普通中产家庭，父母支持度高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样有趣、有生活情趣、能一起折腾的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨131",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨131",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 29,
+        "birth_year": 1995,
+        "location": {
+          "city": "国内（一线）",
+          "tier": "tier_1"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场上升期",
+          "tags": [
+            "高颜值",
+            "野心",
+            "焦虑"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人名下无房，高薪但开销大，存款较少",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 168,
+          "appearance_comment": "外形条件极其出色，气质成熟",
+          "style_tag": "ambitious_beauty"
+        },
+        "family": {
+          "background_desc": "家境普通，但个人能力强"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能提供稳定经济支持和生活引导的成熟男性。对方应有较高的社会地位。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨132",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨132",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "研发人员",
+          "tags": [
+            "高压",
+            "内向",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪但无房，目前处于首付积累阶段",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "书生气，略显疲惫",
+          "style_tag": "workaholic_scholar"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持力度较小"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找温柔体贴、能理解其工作压力的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨133",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨133",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "金融行业",
+          "tags": [
+            "精致",
+            "追求品味",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪，个人名下有房，消费水平高",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值高，打扮精致",
+          "style_tag": "urban_chic"
+        },
+        "family": {
+          "background_desc": "家境良好，父母对其期望高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找品味相当、能共同提升生活质量的男性。拒绝‘土气’。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨134",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨134",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "温和",
+            "无上进心",
+            "安稳"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭无负担",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "外貌中等，谈吐温和",
+          "style_tag": "quiet_official"
+        },
+        "family": {
+          "background_desc": "父母均退休，家庭氛围好"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样安稳、不折腾的女性，渴望过平静的小日子。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨135",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨135",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场上升期",
+          "tags": [
+            "草根逆袭",
+            "生存韧性",
+            "原生家庭重担"
+          ]
+        },
+        "financials": {
+          "assets_desc": "无家庭助力，全靠个人努力，家境极差",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 150,
+          "appearance_comment": "形象管理好，有健身习惯，身高是短板",
+          "style_tag": "energetic_petite"
+        },
+        "family": {
+          "background_desc": "重男轻女，有个小19岁的弟弟，家庭黑洞巨大"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "担心自身条件无竞争力，渴望避风港，对婚恋感到动摇。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨136",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨136",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "辽宁小城市",
+          "tier": "tier_4_or_5"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "照骗",
+            "相亲狂魔"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，父母退休金，无负担",
+          "income_tier": "B (Local T1)"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "真实长相潦草显老，美颜照片诈骗",
+          "style_tag": "unkempt_official"
+        },
+        "family": {
+          "background_desc": "体制内家庭，相亲60次全部失败"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "拒绝护士柜员，不接受纹身，自认硬件无懈可击。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨137",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨137",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "纽约",
+          "tier": "overseas"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "媒体人",
+          "tags": [
+            "海归",
+            "独立",
+            "有文身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境优渥，个人高薪",
+          "income_tier": "A8.5"
+        },
+        "physicals": {
+          "appearance_comment": "颜值高，气质独特，有明显文身",
+          "style_tag": "modern_cool"
+        },
+        "family": {
+          "background_desc": "华人移民家庭，背景深厚"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找文化同频、能接纳其生活方式的ABC或华人精英。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨138",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨138",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 33,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "博士",
+        "career": {
+          "primary": "高校教师",
+          "tags": [
+            "高知",
+            "事业编",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，老家有多套房产，家庭富裕",
+          "income_tier": "A8"
+        },
+        "physicals": {
+          "appearance_comment": "外貌中等偏下，不擅社交",
+          "style_tag": "academic_plain"
+        },
+        "family": {
+          "background_desc": "高知家庭，父母对其管教极严"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样高知、性格单纯的女性。渴望稳定的家庭生活。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨139",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨139",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自媒体运营",
+          "tags": [
+            "活泼",
+            "有想法",
+            "社交圈广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人攒钱买车，名下无房，收入浮动大",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值处于高位，性格古灵精怪",
+          "style_tag": "quirky_creative"
+        },
+        "family": {
+          "background_desc": "普通中产家庭，父母思想开放"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能接住梗、且有一定的经济基础支持其折腾的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨140",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨140",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "温顺",
+            "家庭听命者"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭资产底子厚",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "submissive_official"
+        },
+        "family": {
+          "background_desc": "典型强势家庭。母亲掌握绝对话语权，本人性格软弱。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样体制内、能被母亲认可的女性。缺乏个人独立主张。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨141",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨141",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "金融行业",
+          "tags": [
+            "精致",
+            "追求品味",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪，个人名下有房，消费水平高",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值高，打扮精致",
+          "style_tag": "urban_chic"
+        },
+        "family": {
+          "background_desc": "家境良好，父母对其期望高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找品味相当、能共同提升生活质量的男性。拒绝‘土气’。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨142",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨142",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "研发人员",
+          "tags": [
+            "高压",
+            "内向",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪但无房，目前处于首付积累阶段",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "书生气，略显疲惫",
+          "style_tag": "workaholic_scholar"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持力度较小"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找温柔体贴、能理解其工作压力的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨143",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨143",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自由职业",
+          "tags": [
+            "活泼",
+            "不确定性",
+            "社交广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "收入不稳定，目前无大额资产",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 162,
+          "appearance_comment": "外向型美女，社交属性强",
+          "style_tag": "vibrant_influencer"
+        },
+        "family": {
+          "background_desc": "家庭氛围宽松，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能玩到一块儿的伴侣。拒绝沉闷的体制内。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨144",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨144",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 35,
+        "birth_year": 1989,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "小私企老板",
+          "tags": [
+            "奋斗",
+            "务实",
+            "离异无孩"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款，现金流稳定",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "外形成熟稳重，略显老成",
+          "style_tag": "pragmatic_businessman"
+        },
+        "family": {
+          "background_desc": "离异无孩，父母已退休，家庭无负担"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能持家的女性。最好能共同经营家庭生活。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨145",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨145",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士在读",
+        "career": {
+          "primary": "学生",
+          "tags": [
+            "清纯",
+            "有灵气",
+            "寻求庇护"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境普通，目前无个人资产",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值极高，有初恋感",
+          "style_tag": "pure_innocence"
+        },
+        "family": {
+          "background_desc": "普通工薪家庭，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能提供稳定经济支持和生活引导的成熟男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨146",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨146",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 32,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自雇人士",
+          "tags": [
+            "奋斗",
+            "务实",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "pragmatic_worker"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能一起过日子的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨147",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨147",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "外企职员",
+          "tags": [
+            "精致",
+            "追求品味",
+            "焦虑提前"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，高薪，消费水平较高",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 163,
+          "appearance_comment": "颜值高，气质优雅",
+          "style_tag": "urban_elegant"
+        },
+        "family": {
+          "background_desc": "独生女，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找品味相当、能共同提升生活质量的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨148",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨148",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 34,
+        "birth_year": 1990,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "工程师",
+          "tags": [
+            "稳重",
+            "务实",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "pragmatic_worker"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能一起过日子的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨149",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨149",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自媒体运营",
+          "tags": [
+            "活泼",
+            "有想法",
+            "社交圈广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人攒钱买车，名下无房，收入浮动大",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值处于高位，性格古灵精怪",
+          "style_tag": "quirky_creative"
+        },
+        "family": {
+          "background_desc": "普通中产家庭，父母思想开放"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能接住梗、且有一定的经济基础支持其折腾的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨150",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨150",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "温顺",
+            "家庭听命者"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭资产底子厚",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "submissive_official"
+        },
+        "family": {
+          "background_desc": "典型强势家庭。母亲掌握绝对话语权，本人性格软弱。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样体制内、能被母亲认可的女性。缺乏个人独立主张。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨151",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨151",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 33,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "博士",
+        "career": {
+          "primary": "科研单位",
+          "tags": [
+            "高知",
+            "严谨",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，高薪，经济独立",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "气质沉稳，不善打扮",
+          "style_tag": "academic_plain"
+        },
+        "family": {
+          "background_desc": "知识分子家庭，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找认知同频、能理解科研节奏的男性。渴望稳定的情感支持。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨152",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨152",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "温和",
+            "安稳",
+            "无野心"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，家庭无负担",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "quiet_official"
+        },
+        "family": {
+          "background_desc": "父母均退休，家庭氛围和谐"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样体制内、能共同过平静生活的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨153",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨153",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "国内",
+          "tier": "rural_origin"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场上升期",
+          "tags": [
+            "草根逆袭",
+            "生存韧性",
+            "原生家庭重担"
+          ]
+        },
+        "financials": {
+          "assets_desc": "无家庭助力，全靠个人努力，家境极差",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 150,
+          "appearance_comment": "形象管理好，有健身习惯，身高是短板",
+          "style_tag": "energetic_petite"
+        },
+        "family": {
+          "background_desc": "重男轻女，有个小19岁的弟弟，家庭黑洞巨大"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "担心自身条件无竞争力，渴望避风港。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨154",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨154",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "辽宁小城市",
+          "tier": "tier_4_or_5"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内",
+          "tags": [
+            "稳定",
+            "照骗",
+            "相亲狂魔"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车，父母退休金，无负担",
+          "income_tier": "B (Local T1)"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "真实长相潦草显老，美颜照片诈骗",
+          "style_tag": "unkempt_official"
+        },
+        "family": {
+          "background_desc": "体制内家庭，相亲60次全部失败"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "拒绝护士柜员，不接受纹身。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨155",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨155",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 32,
+        "birth_year": 1994,
+        "location": {
+          "city": "纽约",
+          "tier": "overseas"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "媒体人",
+          "tags": [
+            "海归",
+            "独立",
+            "有文身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境优渥，个人高薪",
+          "income_tier": "A8.5"
+        },
+        "physicals": {
+          "appearance_comment": "颜值高，气质独特，有明显文身",
+          "style_tag": "modern_cool"
+        },
+        "family": {
+          "background_desc": "华人移民家庭，背景深厚"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找文化同频、能接纳其生活方式的ABC或华人精英。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨156",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨156",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士",
+        "career": {
+          "primary": "研发人员",
+          "tags": [
+            "高压",
+            "内向",
+            "母胎单身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "高薪但无房，目前处于首付积累阶段",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "书生气，略显疲惫",
+          "style_tag": "workaholic_scholar"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持力度较小"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找温柔体贴、能理解其工作压力的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨157",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨157",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自由职业",
+          "tags": [
+            "活泼",
+            "不确定性",
+            "社交广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "收入不稳定，目前无大额资产",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 162,
+          "appearance_comment": "外向型美女，社交属性强",
+          "style_tag": "vibrant_influencer"
+        },
+        "family": {
+          "background_desc": "家庭氛围宽松，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能玩到一块儿的伴侣。拒绝沉闷的体制内。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨158",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨158",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 35,
+        "birth_year": 1989,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "小私企老板",
+          "tags": [
+            "奋斗",
+            "务实",
+            "离异无孩"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款，现金流稳定",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "外形成熟稳重，略显老成",
+          "style_tag": "pragmatic_businessman"
+        },
+        "family": {
+          "background_desc": "离异无孩，父母已退休，家庭无负担"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能持家的女性。最好能共同经营家庭生活。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨159",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨159",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "硕士在读",
+        "career": {
+          "primary": "学生",
+          "tags": [
+            "清纯",
+            "有灵气",
+            "寻求庇护"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境普通，目前无个人资产",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值极高，有初恋感",
+          "style_tag": "pure_innocence"
+        },
+        "family": {
+          "background_desc": "普通工薪家庭，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能提供稳定经济支持和生活引导的成熟男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨160",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨160",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 32,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自雇人士",
+          "tags": [
+            "奋斗",
+            "务实",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "pragmatic_worker"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能一起过日子的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨161",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨161",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "外企职员",
+          "tags": [
+            "精致",
+            "追求品味",
+            "焦虑提前"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，高薪，消费水平较高",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 163,
+          "appearance_comment": "颜值高，气质优雅",
+          "style_tag": "urban_elegant"
+        },
+        "family": {
+          "background_desc": "独生女，父母对其期望较高"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找品味相当、能共同提升生活质量的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨162",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨162",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 34,
+        "birth_year": 1990,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "工程师",
+          "tags": [
+            "稳重",
+            "务实",
+            "单身久"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，有一定存款",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "外貌中等，谈吐保守",
+          "style_tag": "pragmatic_worker"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持个人发展"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "找一个性格温柔、能一起过日子的女性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨163",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨163",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内（二线）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自媒体运营",
+          "tags": [
+            "活泼",
+            "有想法",
+            "社交圈广"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人攒钱买车，名下无房，收入浮动大",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "颜值处于高位，性格古灵精怪",
+          "style_tag": "quirky_creative"
+        },
+        "family": {
+          "background_desc": "普通中产家庭，父母思想开放"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找有趣、能接住梗、且有一定的经济基础支持其折腾的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨164",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨164",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1999,
+        "location": {
+          "city": "山东某县城",
+          "tier": "tier_5"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内教师",
+          "tags": [
+            "稳定",
+            "事业编",
+            "社会地位高"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母已备全款房车，个人年入7-8w",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "整体条件优，具体身高未详",
+          "style_tag": "decent_teacher"
+        },
+        "family": {
+          "background_desc": "独生女，父母中石化退休（或在职），家境优渥且无负担"
+        },
+        "marital_status": "离异（起诉离婚，未办婚礼，未同居）"
+      },
+      "expectations": {
+        "requirements_desc": "拒绝二婚带娃男；可接受男方家境、学历或工作稍差（1-2项短板），但必须有“责任感”。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨165",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨165",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "苏州（东北籍）",
+          "tier": "tier_2"
+        },
+        "education": "硕士（美国TOP10, 约翰霍普金斯大学）",
+        "career": {
+          "primary": "科技大厂产品经理",
+          "tags": [
+            "高薪",
+            "海归",
+            "高智商"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境优渥（父央企、母三甲正高），个人年入25-30w",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 170,
+          "appearance_comment": "颜值高，谷歌架构感，气质出众",
+          "style_tag": "high_end_returnee"
+        },
+        "family": {
+          "background_desc": "独生女，父母均为体制内/专业人士，背景深厚"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找在江浙沪定居的男士；要求身高175cm以上（或高于自己），父母不离异，脾气好；可接受非独生子。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨166",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨166",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "北京（山东籍）",
+          "tier": "tier_1"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "主持人/自媒体网红",
+          "tags": [
+            "几十万粉丝",
+            "高曝光",
+            "职场女强人"
+          ]
+        },
+        "financials": {
+          "assets_desc": "收入丰厚，家庭背景稳定（山东体制内）",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "颜值处于高位（班花级，6分），职业素养高",
+          "style_tag": "spotlight_star"
+        },
+        "family": {
+          "background_desc": "山东体制内家庭，父母传统且希望其早婚"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找各方面条件（学历、收入、家境）与自己对等的“六边形战士”；抗拒阶层跨度太大的高净值男（怕驾驭不了）；要求对方性格极度包容且颜值过关。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨167",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨167",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 32,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "大专（成人教育/函授感）",
+        "career": {
+          "primary": "国企普通职员",
+          "tags": [
+            "稳定",
+            "低薪",
+            "无家庭助力"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人存款小几十万，家庭无助力，母亲打零工",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "height_cm": 180,
+          "appearance_comment": "颜值处于低位（3-4分），长相极具辨识度（疯狂大夫感）",
+          "style_tag": "plain_worker"
+        },
+        "family": {
+          "background_desc": "草根家庭，父母无退休保障或保障极低"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "渴望向上社交；目标女性年入30w+，个人资产A7（百万级）；要求对方90后，无生育史；自荐优点是能受气、会做饭。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨168",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨168",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 23,
+        "birth_year": 2001,
+        "location": {
+          "city": "江浙沪区域",
+          "tier": "tier_2"
+        },
+        "education": "本科（空乘方向）",
+        "career": {
+          "primary": "空姐/空乘",
+          "tags": [
+            "高颜值",
+            "高流动性",
+            "吃青春饭"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人及父母为普通工薪阶层（铁路系统），爷爷名下有多套房产（非个人资产）",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "颜值极高，形象气质佳，具有明显的职业吸引力",
+          "style_tag": "flight_attendant_chic"
+        },
+        "family": {
+          "background_desc": "江浙沪普通家庭，爷爷辈有资产积累，但父母辈助力有限"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "目前在接触一名海归二代（接手家业中）；对比以往接触的一代男士，感觉二代标的基本盘难以驾驭，产生博弈焦虑；声称暂时不考虑长期关系。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨169",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨169",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 33,
+        "birth_year": 1992,
+        "location": {
+          "city": "国内（东北籍）",
+          "tier": "tier_2"
+        },
+        "education": "硕士（海归）",
+        "career": {
+          "primary": "职场女性",
+          "tags": [
+            "留学生",
+            "高知",
+            "性格强悍"
+          ]
+        },
+        "financials": {
+          "assets_desc": "小康家庭，父母均为体制内（父已故），独生女",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 163,
+          "appearance_comment": "外形一般，体态偏丰满（130斤），自述“显瘦”",
+          "style_tag": "strong_independent"
+        },
+        "family": {
+          "background_desc": "被家庭和学校保护得极好的独生女，缺乏社会磨砺感"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "曾执着于“六边形战士”；习惯于“工具型”伴侣（要求对方融入自己的滑雪、潜水圈子并全程陪同）；渴望通过婚姻对抗生命的无意义感。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨170",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨170",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 22,
+        "birth_year": 2004,
+        "location": {
+          "city": "美国（MIT）",
+          "tier": "overseas"
+        },
+        "education": "本科（MIT, 数学系）",
+        "career": {
+          "primary": "量化金融（已拿Offer）",
+          "tags": [
+            "顶级名校",
+            "量化精英",
+            "高智商"
+          ]
+        },
+        "financials": {
+          "assets_desc": "顶级未来收入预期，当前为高知精英学生",
+          "income_tier": "A9+ (Potential)"
+        },
+        "physicals": {
+          "height_cm": 174,
+          "appearance_comment": "颜值高，身材管理极佳（110斤，练体育），形象极其出众",
+          "style_tag": "ivy_league_elite"
+        },
+        "family": {
+          "background_desc": "高知家庭，对其教育和个人发展支持极大"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "纠结于找对象的时机（在校找、职场找、还是回国后找）；性格较硬，带有典型的名校精英优越感。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨171",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨171",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "德国（慕尼黑附近）",
+          "tier": "overseas"
+        },
+        "education": "博士（在读，德国知名高校）",
+        "career": {
+          "primary": "科研/博士生",
+          "tags": [
+            "留德博士",
+            "高智商",
+            "健身达人"
+          ]
+        },
+        "financials": {
+          "assets_desc": "独生子，重庆6套房，家庭背景优渥（父老师、母国企退休且有生意）",
+          "income_tier": "A7+"
+        },
+        "physicals": {
+          "height_cm": 179,
+          "appearance_comment": "身材极好（多年健身），谈吐幽默利索，双商在线",
+          "style_tag": "high_iq_athlete"
+        },
+        "family": {
+          "background_desc": "重庆中产及以上家庭，父母有保障，完全无负担"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同频、温柔的女性；要求对方家庭无负担；纠结于毕业后留德（孤独）还是回国（竞争与生活平衡）。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨172",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨172",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 24,
+        "birth_year": 2000,
+        "location": {
+          "city": "北京（目前在美国伯克利）",
+          "tier": "tier_1"
+        },
+        "education": "硕士（UC Berkeley; 本科人大）",
+        "career": {
+          "primary": "即将赴港工作",
+          "tags": [
+            "常春藤级名校",
+            "北京土著",
+            "职场潜力股"
+          ]
+        },
+        "financials": {
+          "assets_desc": "北京名下1套房，父母均为公务员，家境扎实",
+          "income_tier": "B+ (High Potential)"
+        },
+        "physicals": {
+          "appearance_comment": "连麦时未整理形象（胡子拉碴），颜值水平决定其上限，自述“不够聪明”实为谦虚",
+          "style_tag": "ivy_league_scholar"
+        },
+        "family": {
+          "background_desc": "典型的北京中产体制内家庭，有一个妹妹，家庭氛围稳定"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "探寻择偶的上限与下限；准备去香港金融/科技圈奋斗；希望通过个人能力实现阶层或财富的进一步稳固。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨173",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨173",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 2001,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "职场女性",
+          "tags": [
+            "情感困惑",
+            "博弈低位"
+          ]
+        },
+        "financials": {
+          "assets_desc": "普通家庭，家境逊于男方",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "未见照片，自述性格温顺",
+          "style_tag": "traditional_girl"
+        },
+        "family": {
+          "background_desc": "普通家庭，对比男方（教师家庭）缺乏社会地位及资产优势"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "渴望与现任男友修成正果；纠结于对方及家庭的“处女情结”；询问是否可以通过其他方面的努力（家务、事业等）来弥补非处身份带来的“不足”。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨174",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨174",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "沿海某二线城市",
+          "tier": "tier_2"
+        },
+        "education": "大专",
+        "career": {
+          "primary": "技术服务（频繁出差）",
+          "tags": [
+            "高个子",
+            "体制内家庭",
+            "社交回避"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母均为体制内/国企背景，年入15w左右，家境平稳",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 183,
+          "appearance_comment": "身高优势显著，体重68kg偏瘦，性格内向不爱收拾",
+          "style_tag": "introverted_giant"
+        },
+        "family": {
+          "background_desc": "典型的沿海稳健家庭，父母焦虑其婚育，但其个人主观能动性极低"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "试图通过拼事业来提升“择偶上线”；因工作流动性大且性格内向，缺乏接触女性的机会；排斥传统的生硬相亲。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨175",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨175",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "自由画师/插画经纪",
+          "tags": [
+            "艺术家气质",
+            "高自由度",
+            "松弛感"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房，月入1w左右，父母背景稳健（父经商、母退休教师）",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "颜值还可以，身材不高但气质松弛，独生女",
+          "style_tag": "artistic_free_spirit"
+        },
+        "family": {
+          "background_desc": "从小放养式教育，被父母极度宠溺，不爱干家务，社会经验较浅"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "极其严重的“颜控”；渴望被照顾、被宠溺；拒绝上进心低、收入低的男性（因前任教训），但又容易被此类人的情绪价值吸引。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨176",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨176",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 32,
+        "birth_year": 1992,
+        "location": {
+          "city": "福州（东北籍）",
+          "tier": "tier_2"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "央企职员",
+          "tags": [
+            "稳定",
+            "高薪",
+            "体制内感"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下房车齐全，无贷款压力，年入30w左右",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 180,
+          "appearance_comment": "体重166斤（曾200+），面部肉感重，五官可爱（界王神既视感）",
+          "style_tag": "stable_soe_elite"
+        },
+        "family": {
+          "background_desc": "父母均为公务员（母已退休），家庭资产A7量级，无任何负担"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找门当户对、能过日子的女性；要求对方96后，家境资产A7左右，外貌正常（4分以上）且不胖；渴望在现实博弈中加入“感情”元素。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨177",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨177",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 34,
+        "birth_year": 1991,
+        "location": {
+          "city": "甘肃天水（县城）",
+          "tier": "tier_5"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "体制内职员",
+          "tags": [
+            "在编在岗",
+            "稳定",
+            "大龄"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境普通，父母已退休，有一个已婚弟弟",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 157,
+          "appearance_comment": "颜值处于中低位（4分），自述注重保养有精神，但身高是明显硬伤",
+          "style_tag": "traditional_staff"
+        },
+        "family": {
+          "background_desc": "西北县城普通家庭，有弟弟属性在相亲市场通常属于减分项"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找“合适”的人结婚，要求家境相当或稍好；目前接触一名94年兰州国企男（各方面硬件极佳），但在纠结异地问题。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨178",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨178",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 30,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "教培行业职员",
+          "tags": [
+            "离异带娃",
+            "前教培老师",
+            "高博弈位"
+          ]
+        },
+        "financials": {
+          "assets_desc": "年入20-30w，个人经济独立，孩子由前夫抚养",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "appearance_comment": "未见照片，但能吸引A8标的说明形象及情绪价值处于高位",
+          "style_tag": "mature_professional"
+        },
+        "family": {
+          "background_desc": "曾受前夫PUA和过时情感理论影响，自我定位较低"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "询问与A8资产男友推进关系、见家长的“姿态”；担忧对方母亲严厉及自己的婚史背景；实质在确认此男友是否为自己的择偶天花板。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨179",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨179",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "上海",
+          "tier": "tier_1"
+        },
+        "education": "本科（南华大学）",
+        "career": {
+          "primary": "自由职业",
+          "tags": [
+            "小镇做题家",
+            "高薪自由职员",
+            "幽默"
+          ]
+        },
+        "financials": {
+          "assets_desc": "年入70-80w，在老家/同龄人中属于顶级成功者，但在大城市立足感不强",
+          "income_tier": "B++"
+        },
+        "physicals": {
+          "appearance_comment": "颜值还行，但有重度烟瘾（日均一包烟），导致整体精神状态受损",
+          "style_tag": "self_made_freelancer"
+        },
+        "family": {
+          "background_desc": "小镇草根出身，全靠个人奋斗实现财富积累，缺乏家族支持"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "极度渴望结婚（不想拖过33岁）；对女方外貌无硬性要求，只要能稳定过日子；愿意为伴侣戒烟。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨180",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨180",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 30,
+        "birth_year": 1994,
+        "location": {
+          "city": "黄冈（江西九江籍）",
+          "tier": "tier_4"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "教师",
+          "tags": [
+            "体制内",
+            "稳健",
+            "教师编制"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有房有车，父母国企且有两套房，家境扎实",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 178,
+          "appearance_comment": "体重196斤（重度肥胖），曾一度达到220斤，视觉形象严重扣分",
+          "style_tag": "overweight_teacher"
+        },
+        "family": {
+          "background_desc": "典型的小城市体制内中产家庭，生活压力极小"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "目标女性为00后（24岁左右）；要求对方身高165cm、稍胖（140斤）、性格憨厚朴实、且长相要稍微好看；要求对方无负债、有稳定工作。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨181",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨181",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "英国（约克大学）",
+          "tier": "overseas"
+        },
+        "education": "博士（在读，管理科学与AI方向）",
+        "career": {
+          "primary": "科研/博士生",
+          "tags": [
+            "留英博士",
+            "高智商",
+            "广东背景"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家境稳定，父母在沿海二线城市工作，有一个弟弟",
+          "income_tier": "B+ (High Potential)"
+        },
+        "physicals": {
+          "height_cm": 158,
+          "appearance_comment": "身材纤细（90斤），身高处于低位，谈吐理智清爽",
+          "style_tag": "intellectual_scholar"
+        },
+        "family": {
+          "background_desc": "籍贯中部三四线城市，长期在广东生活，具有典型的移民奋斗家庭特征"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "倾向于找广东籍或在广东发展的男士；要求对方年薪50w+；看重个人能力，对家庭背景要求相对宽松。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨182",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨182",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 31,
+        "birth_year": 1993,
+        "location": {
+          "city": "湖北某三四线城市",
+          "tier": "tier_3"
+        },
+        "education": "学历不高",
+        "career": {
+          "primary": "个体经营",
+          "tags": [
+            "高身价",
+            "离异带娃",
+            "传统观念"
+          ]
+        },
+        "financials": {
+          "assets_desc": "个人年入20w，家族资产约3000w（需与亲弟平分），姐姐姐夫均为体制内",
+          "income_tier": "A7+"
+        },
+        "physicals": {
+          "height_cm": 176,
+          "appearance_comment": "普通男性形象，谈吐带有明显的地域及传统底色",
+          "style_tag": "traditional_business_owner"
+        },
+        "family": {
+          "background_desc": "父已故，有一个读初中的亲弟，家庭结构复杂且面临财产分配，母亲掌控欲强"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求稳定家庭生活，且有再生育（尤其是男孩）打算；母亲要求女方不能带孩子，最好无婚史或短婚未育；渴望高情绪价值与劳动价值的投入。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨183",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨183",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 22,
+        "birth_year": 2002,
+        "location": {
+          "city": "杭州（四川籍）",
+          "tier": "tier_1"
+        },
+        "education": "博士（浙大临床医学直博在读）",
+        "career": {
+          "primary": "医学博士/医生",
+          "tags": [
+            "顶级名校",
+            "高知精英",
+            "医生路径"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有杭州全款房车（约500w），父母支持力度极大，独生女",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 166,
+          "appearance_comment": "颜值处于高位，长相面善端庄（女儿国国王既视感），气质出众",
+          "style_tag": "medical_elite_queen"
+        },
+        "family": {
+          "background_desc": "四川高净值家庭，父母开明且为其做好了全方位的物质铺垫"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求门当户对、能共同进步的伴侣；自认为性格较强，在寻找能够平视且包容自己的男性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨184",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨184",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "武汉（武汉大学）",
+          "tier": "tier_2"
+        },
+        "education": "博士（武汉大学在读；本硕双非）",
+        "career": {
+          "primary": "科研/博士生",
+          "tags": [
+            "逆袭女博士",
+            "武大学子",
+            "农村出身"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母开厂年入20-30w，有一个读大学的妹妹，家境普通但稳定",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "appearance_comment": "未见照片，谈吐礼貌但带有学术圈典型的强势感",
+          "style_tag": "academic_climber"
+        },
+        "family": {
+          "background_desc": "农村奋斗家庭，通过个人努力实现阶层跨越的典型代表"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "探寻择偶上下线；原本执着于男方学历，现转为关注收入；正在接触一名本硕博均为985的男博士，但表现出不确定性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨185",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨185",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 28,
+        "birth_year": 1996,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "公务员",
+          "tags": [
+            "体制内",
+            "雷厉风行",
+            "争议行为"
+          ]
+        },
+        "financials": {
+          "assets_desc": "重组家庭，父亲经商亏损，个人经济无家庭支持",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 160,
+          "appearance_comment": "颜值处于高位（系统中公认漂亮），体重50kg，身材匀称",
+          "style_tag": "system_beauty_with_edge"
+        },
+        "family": {
+          "background_desc": "父母离异且各有重组，自身也经历离异，家庭结构极度不稳定"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找能够包容其过往、理解其“果断”性格的伴侣；因前任赌博欠债而离婚；希望能找到“确定性”更强的关系。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨186",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨186",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "深圳（东北籍）",
+          "tier": "tier_1"
+        },
+        "education": "硕士（211高校）",
+        "career": {
+          "primary": "在编教师",
+          "tags": [
+            "体制内",
+            "深漂",
+            "高个子"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母为老家国企小领导，家境稳健，个人在深圳有稳定编制收入",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 181,
+          "appearance_comment": "面相较凶（像古代起义领袖），沟通方式直接、生硬（人机感），第一印象不佳",
+          "style_tag": "stern_academic"
+        },
+        "family": {
+          "background_desc": "典型的东北体制内家庭，独生子，追求生活平稳，无爆发户心态"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻找同样在体制内、性格温和、能长期稳定过日子的女性；渴望在周围圈子中通过自然相处建立关系。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨187",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨187",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "杭州（山西籍）",
+          "tier": "tier_1"
+        },
+        "education": "硕士（北邮计算机专业）",
+        "career": {
+          "primary": "互联网大厂程序员",
+          "tags": [
+            "大厂码农",
+            "高薪",
+            "北邮学霸"
+          ]
+        },
+        "financials": {
+          "assets_desc": "大厂稳定收入，家境正常，个人奋斗属性强",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 168,
+          "appearance_comment": "身高有优势，体重60kg略显丰满（自述微胖），颜值3.5-4分，谈吐过于理智干练",
+          "style_tag": "logical_tech_female"
+        },
+        "family": {
+          "background_desc": "山西长治奋斗家庭，北邮学霸背景赋予了其极强的逻辑性，但也压抑了感性表达"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求大方、会聊天、能提供情绪价值的男性；坚决拒绝抠门男；渴望找到自己的择偶上限，但目前在社交中常感到乏味。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨188",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨188",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 28,
+        "birth_year": 1998,
+        "location": {
+          "city": "纽约",
+          "tier": "overseas"
+        },
+        "education": "硕士（美国东北大学，CS专业）",
+        "career": {
+          "primary": "程序员/金融科技相关",
+          "tags": [
+            "留美精英",
+            "CS硕士",
+            "家族继承人"
+          ]
+        },
+        "financials": {
+          "assets_desc": "家庭资产A8.6-A8.8量级，父母在西班牙经商，可在全球大城市全款买房",
+          "income_tier": "A8"
+        },
+        "physicals": {
+          "height_cm": 177,
+          "appearance_comment": "颜值普通，说话有松弛感，身高自述177cm",
+          "style_tag": "low_key_elite"
+        },
+        "family": {
+          "background_desc": "西班牙经商家庭，中产及以上背景，提供极强物质支撑与决策权"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "在纽约这种“女多男少”的血海市场寻找定位；担心自己不够“潮”或不够光鲜而被同阶层女性忽视。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨189",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨189",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 33,
+        "birth_year": 1991,
+        "location": {
+          "city": "广东三线",
+          "tier": "tier_3"
+        },
+        "education": "博士在读（211本科，海外硕士）",
+        "career": {
+          "primary": "博士在读（停薪留职）",
+          "tags": [
+            "高知女性",
+            "体制内背景",
+            "离异无孩"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母一方体制内退休，一方医生返聘，家境稳健，个人目前停薪留职读博",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": null,
+          "appearance_comment": "嗓音有亏感，流露孤独与沉重感，说话有防备心",
+          "style_tag": "melancholic_academic"
+        },
+        "family": {
+          "background_desc": "广东三线城市体制内精英家庭，父母职业背景良好"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求“稳定的陪伴”；排斥赚钱多或创业中的男性，更倾向于工作稳定、有家庭属性、愿意付出时间成本的伴侣。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨190",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨190",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "上海（安徽籍）",
+          "tier": "tier_1"
+        },
+        "education": "本科",
+        "career": {
+          "primary": "模特经纪人/销售",
+          "tags": [
+            "沪漂成长",
+            "高薪潜力",
+            "销售属性"
+          ]
+        },
+        "financials": {
+          "assets_desc": "名下有两套上海房产（其中一套约600w），弟弟留美，家境优渥但重男轻女倾向明显",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 170,
+          "appearance_comment": "身高170cm，体重56kg，外形条件优越，职业化程度高",
+          "style_tag": "shanghai_fashion_manager"
+        },
+        "family": {
+          "background_desc": "皖北农村出身但在上海扎根，父母思想传统且极度强势，对女儿实施强物理及精神控制"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "渴望摆脱父母“唯钱论”的择偶要求，证明自己的个人价值；纠结于是否应听从父母安排寻找“有钱人”；探寻独立后的择偶上限。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨191",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨191",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 22,
+        "birth_year": 2002,
+        "location": {
+          "city": "国内",
+          "tier": "unknown"
+        },
+        "education": "学历较低",
+        "career": {
+          "primary": "化妆师",
+          "tags": [
+            "少数民族",
+            "早婚出逃",
+            "离异有孩"
+          ]
+        },
+        "financials": {
+          "assets_desc": "工作相对稳定，无家庭背景支持，目前处于个人独立生存状态",
+          "income_tier": "C"
+        },
+        "physicals": {
+          "appearance_comment": "未见照片，化妆师背景说明审美及自我修饰能力尚可",
+          "style_tag": "makeup_artist"
+        },
+        "family": {
+          "background_desc": "回族，16岁被动进入婚姻，家庭观念传统且封闭，目前与原家庭及前夫家庭关系疏离"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "在赚钱与寻求新一段婚姻之间徘徊；可接受大10岁以内的离异男性（含带娃）；渴望通过一段稳定的关系获得“体面”的生活和陪伴。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨192",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨192",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 26,
+        "birth_year": 1998,
+        "location": {
+          "city": "国内五线城市",
+          "tier": "tier_5"
+        },
+        "education": "大专（护理专业）",
+        "career": {
+          "primary": "医院事业编",
+          "tags": [
+            "体制内",
+            "护士",
+            "高颜值"
+          ]
+        },
+        "financials": {
+          "assets_desc": "月入5000+，家境普通，独生女",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 158,
+          "appearance_comment": "颜值极高（迷你版张柏芝与巩俐结合体），身材苗条（95斤），气质忧郁",
+          "style_tag": "depressed_beauty"
+        },
+        "family": {
+          "background_desc": "极其压抑的原生家庭，母亲长期实施打压式、焦虑式教育，父亲性格软弱，家庭氛围充满毒性"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "渴望摆脱父母安排的“视觉灾难型”相亲；探寻适合自己的性格侧写及择偶方向；寻求从长期心理压抑中解脱的方法。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨193",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨193",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "国内（东北籍，全国漂）",
+          "tier": "tier_1"
+        },
+        "education": "硕士（985高校，211本科）",
+        "career": {
+          "primary": "在读博士/兼职自由职业",
+          "tags": [
+            "高薪学霸",
+            "讨好型人格",
+            "全款房"
+          ]
+        },
+        "financials": {
+          "assets_desc": "月入3w左右，吉林全款房一套，个人变现能力极强",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": 168,
+          "appearance_comment": "身高168cm，体重57.5kg，外形条件佳，目前脚部骨折在养伤",
+          "style_tag": "fragile_elite_female"
+        },
+        "family": {
+          "background_desc": "底层出身，父母低学历体力劳动者，实施长期苦难教育，情感忽视严重，目前关系决裂"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "极度渴望通过结婚逃避原生家庭的控制与孤独；在择偶中习惯性讨好，不计较名利，只求精神慰藉；询问目前的择偶画像。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨194",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨194",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 23,
+        "birth_year": 2001,
+        "location": {
+          "city": "杭州（安徽籍）",
+          "tier": "tier_1"
+        },
+        "education": "硕士（韩国留学）",
+        "career": {
+          "primary": "待定/职场新人",
+          "tags": [
+            "留学生",
+            "白富美",
+            "高挑"
+          ]
+        },
+        "financials": {
+          "assets_desc": "杭州全款小公寓（大学期间父母购入），家庭资产A7.9量级，父母体制内",
+          "income_tier": "A7"
+        },
+        "physicals": {
+          "height_cm": 170,
+          "appearance_comment": "颜值处于顶级（正二八经叫美），身高170cm体重54kg，外形极其出众",
+          "style_tag": "high_value_socialite"
+        },
+        "family": {
+          "background_desc": "安徽四线城市体制内精英家庭，对女儿在杭生活提供了强力的物质支撑"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "寻求“同频”、三观一致的伴侣；不排斥大7-8岁的男性（93-94年）；比起浪漫仪式感，更看重门当户对与价值合并；感情史普遍较短（<6个月），性格果断。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨195",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨195",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 21,
+        "birth_year": 2003,
+        "location": {
+          "city": "甘肃白银",
+          "tier": "tier_5"
+        },
+        "education": "中专/高中（推断）",
+        "career": {
+          "primary": "待业/放养状态",
+          "tags": [
+            "大码女孩",
+            "重男轻女家庭",
+            "农村背景"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父辈有600-700头羊，但明确资产归属哥哥，个人无任何经济支持",
+          "income_tier": "D"
+        },
+        "physicals": {
+          "height_cm": null,
+          "appearance_comment": "体重150斤以上（实则可能接近200斤），形象在婚恋市场极度受限",
+          "style_tag": "overweight_neglected"
+        },
+        "family": {
+          "background_desc": "单亲父系家庭，严重重男轻女，女儿处于被边缘化的“放养”状态"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "对择偶标准感到迷茫；意识到自身条件的劣势，甚至认为自己这辈子都结不了婚。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨196",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨196",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "北京",
+          "tier": "tier_1"
+        },
+        "education": "本科出国，美国名校（推断Cornell等）",
+        "career": {
+          "primary": "留美工作/准备专注职业",
+          "tags": [
+            "留美精英",
+            "运动健将",
+            "北京大妞"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父亲是北大老师，母亲开公司。北京家庭背景，但父母离异，社会优秀值高但婚恋立他优秀值受损。",
+          "income_tier": "A"
+        },
+        "physicals": {
+          "height_cm": 175,
+          "appearance_comment": "身高175cm，前NCAA联盟运动员（标枪），身材匀称且偏美式健硕，不是中国传统偏好的纤细型。",
+          "style_tag": "athletic_elite"
+        },
+        "family": {
+          "background_desc": "北京高知+经商背景。父母近年离异。父亲（山东籍北大老师）极力劝其回国。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "纠结于“留美”还是“回国”；希望当个“好女儿”但又想当“好的自己”；对伴侣有智力要求（厌蠢），追求同频交流。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨197",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨197",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "未知（省直单位所在地）",
+          "tier": "tier_2"
+        },
+        "education": "本科（推断）",
+        "career": {
+          "primary": "省直单位公务员",
+          "tags": [
+            "体制内精英",
+            "离异带娃",
+            "省直机关"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母为基层领导，个人省直公务员，前夫经济条件强，孩子归父亲抚养",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": null,
+          "appearance_comment": "颜值大众4分，但在系统内（美女少）可算5分。整体形象稳重。",
+          "style_tag": "institutional_elite"
+        },
+        "family": {
+          "background_desc": "基层领导家庭，体制内根基稳固。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "犹豫是否需要婚姻；想要“比自己强”的指导型男性，或“照顾自己”的伴侣。面临“不甘心向下兼容”与“离异带娃市场地位低”的矛盾。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨198",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨198",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "female",
+        "age": 23,
+        "birth_year": 2001,
+        "location": {
+          "city": "郑州",
+          "tier": "tier_2"
+        },
+        "education": "本科（汉语言文学专业）",
+        "career": {
+          "primary": "带货主播",
+          "tags": [
+            "汉语言文学",
+            "直播行业",
+            "准备转型教师"
+          ]
+        },
+        "financials": {
+          "assets_desc": "年收入约10万，普通家庭（无助力不拖累）",
+          "income_tier": "B-"
+        },
+        "physicals": {
+          "height_cm": 165,
+          "appearance_comment": "身高165cm，体重115斤。外形亮眼（主播职业要求），性格独立自主。",
+          "style_tag": "vivacious_主播"
+        },
+        "family": {
+          "background_desc": "普通家庭，父母支持其职业选择但倾向其当老师。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "计划转型为小学老师或国际汉语教师（考教资、考雅思）；对婚恋有需求但自感社交圈窄（多为女性、跳舞爱好），且有一定的“厌男”倾向。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨199",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨199",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 25,
+        "birth_year": 1999,
+        "location": {
+          "city": "上海",
+          "tier": "tier_1"
+        },
+        "education": "本科（推断）",
+        "career": {
+          "primary": "教培行业",
+          "tags": [
+            "北漂背景",
+            "教培老师",
+            "高颜值男性"
+          ]
+        },
+        "financials": {
+          "assets_desc": "年收入约40万，父亲有北京户口，个人暂无，家境中产但与女方差距大",
+          "income_tier": "B"
+        },
+        "physicals": {
+          "height_cm": 182,
+          "appearance_comment": "身高182cm，体重140斤以下。颜值极高（在同性中非常出众），从小享受颜值红利。",
+          "style_tag": "high_value_visual_male"
+        },
+        "family": {
+          "background_desc": "东北籍北京定居家庭，中产水平。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "正与一位上海本地、名校背景（港本美腾）且家境优渥的女性接触。感到“自卑”，卡点在于消费习惯差异、家庭背景悬殊及对未来关系的确定性。"
+      }
+    }
+  },
+  {
+    "case_id": "鳌烨200",
+    "input": {
+      "metadata": {
+        "case_id": "鳌烨200",
+        "source_platform": "Douyin",
+        "source_handle": "鳌烨",
+        "collection_date": "2026-05-04"
+      },
+      "subject_profile": {
+        "gender": "male",
+        "age": 27,
+        "birth_year": 1997,
+        "location": {
+          "city": "巴黎（当前），一线/新一线（计划回国）",
+          "tier": "overseas"
+        },
+        "education": "博士在读（法国工程师学院+博士第三年，211本科，明年毕业）",
+        "career": {
+          "primary": "科研/工程师",
+          "tags": [
+            "留法博士",
+            "工程师背景",
+            "山东籍"
+          ]
+        },
+        "financials": {
+          "assets_desc": "父母在国企，支持回国买房（付5-6成首付），家境稳健，独生子",
+          "income_tier": "B+"
+        },
+        "physicals": {
+          "height_cm": null,
+          "appearance_comment": "颜值自评4-5分。说话温和，共情能力强，带有典型的山东籍体制内后代气质。",
+          "style_tag": "intellectual_overseas_male"
+        },
+        "family": {
+          "background_desc": "山东国企家庭，父母希望其回国（最好进国企/体制内），独生子。"
+        }
+      },
+      "expectations": {
+        "requirements_desc": "纠结于“留法”还是“回国”；刚结束一段长达数年的恋情（前任为华裔，因不愿回国分手）；对国内婚恋市场感到好奇，倾向于寻找同样高知、情绪稳定的女性。"
+      }
+    }
+  }
+]
