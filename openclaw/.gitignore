@@ -1,16 +1,13 @@
 .DS_Store
 
-# Local OpenClaw runtime state inside the workspace
-.openclaw/
-
-# Personal or machine-local notes
-memory/
-
-# Local editor / OS noise
-.idea/
-.vscode/
-
-# Logs or temp artifacts
-*.log
-*.tmp
+# Local runtime state that should never be committed
+runtime/logs/
+runtime/tmp/
+runtime/tasks/
+runtime/flows/
+runtime/devices/
+runtime/identity/
+runtime/plugin-runtime-deps/
+runtime/memory/
+runtime/agents/
 

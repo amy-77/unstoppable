@@ -1,134 +1,189 @@
-# OpenClaw Workspace
+# OpenClaw Agent Framework
 
-This repository contains our shared OpenClaw workspace setup, prompt files, and custom skills.
+This directory is a shareable, safe OpenClaw agent project.
 
-It is intended to let teammates:
+It is designed for teammates who want something more complete than a single skill folder:
 
-- clone the project from GitHub
-- place the files into the correct local OpenClaw workspace
-- use the same agent behavior and custom skills
-- continue adding or updating shared skills in one place
+- shared agent workspace files
+- custom skills
+- sanitized config template
+- runtime layout references
+- install / sync scripts
 
-## What Is In This Repo
+It is not a raw dump of one machine's private `~/.openclaw` directory.
 
-This repo currently focuses on the **workspace layer**, not personal secrets.
+## Project Structure
 
-Included:
+```text
+openclaw/
+  README.md
+  .gitignore
+  workspace/
+    .gitignore
+    AGENTS.md
+    HEARTBEAT.md
+    IDENTITY.md
+    SOUL.md
+    TOOLS.md
+    USER.md
+    skills/
+      matchmaker/
+        SKILL.md
+  config/
+    openclaw.example.json
+  runtime/
+    README.md
+    completions/
+    service-env/
+  scripts/
+    install.sh
+    sync-workspace.sh
+```
 
-- `AGENTS.md`: workspace operating rules
-- `IDENTITY.md`: agent identity/personality
-- `USER.md`: user-specific context
-- `TOOLS.md`: local notes and skill trigger reminders
-- `HEARTBEAT.md`: heartbeat checklist
-- `SOUL.md`: higher-level style / behavior notes
-- `skills/`: custom skills shared by the team
-- `memory/`: local memory notes if we decide to keep them in repo
+## What Is Shared
 
-Not recommended to commit:
+### `workspace/`
 
-- API keys
-- personal tokens
-- private device auth files
-- `~/.openclaw/openclaw.json` with real secrets inside
+This is the actual shared agent workspace layer.
 
-## Current Setup
+After installation, its contents should live in:
 
-Our current active OpenClaw instance is running locally on macOS with:
+```bash
+~/.openclaw/workspace
+```
 
-- OpenClaw config dir: `~/.openclaw`
-- Active workspace: `~/.openclaw/workspace`
-- Gateway mode: `local`
-- Gateway port: `18789`
-- Managed by: `launchd`
-- Current tool profile: `coding`
+This includes:
+
+- `AGENTS.md`
+- `SOUL.md`
+- `TOOLS.md`
+- `IDENTITY.md`
+- `USER.md`
+- custom skills under `workspace/skills/`
+
+### `config/`
+
+This contains a sanitized runtime config template:
+
+- `config/openclaw.example.json`
+
+Teammates should copy it to:
+
+```bash
+~/.openclaw/openclaw.json
+```
+
+and then fill in their own provider keys and token values locally.
+
+### `runtime/`
+
+This documents the broader `~/.openclaw` layout and includes safe reference files such as:
+
+- service environment examples
+- shell completion placeholders
+
+### `scripts/`
+
+These scripts help teammates install or sync this project into a local OpenClaw setup.
+
+## Current Reference Setup
+
+The reference machine currently uses:
+
+- config dir: `~/.openclaw`
+- workspace dir: `~/.openclaw/workspace`
+- gateway mode: `local`
+- gateway port: `18789`
+- tool profile: `coding`
 
 Important distinction:
 
-- `~/.openclaw/openclaw.json` is the **runtime config**
-- `~/.openclaw/workspace/` is the **shared workspace content**
+- `~/.openclaw/openclaw.json` is runtime config
+- `~/.openclaw/workspace/` is shared workspace content
 
-This repo is mainly for the second part: the shared workspace content.
+## Installation
 
-## Recommended Team Setup
+### 1. Install OpenClaw locally
 
-### 1. Install OpenClaw
-
-Each teammate should install OpenClaw locally first.
-
-Then confirm their default workspace exists:
+Make sure these directories exist:
 
 ```bash
+ls ~/.openclaw
 ls ~/.openclaw/workspace
 ```
 
-### 2. Clone This Repo
-
-Clone this repository anywhere first:
+### 2. Clone this repository
 
 ```bash
 git clone <YOUR_GITHUB_REPO_URL>
-cd <YOUR_REPO_DIR>
+cd <YOUR_REPO_DIR>/openclaw
 ```
 
-### 3. Copy Or Sync Into The Real OpenClaw Workspace
+### 3. Install or sync the framework
 
-OpenClaw reads the active workspace from:
+Option A:
 
 ```bash
-~/.openclaw/workspace
+./scripts/install.sh
 ```
 
-So teammates should copy this repo's contents into that directory, or make this repo itself become that directory.
+This will:
 
-Simplest approach:
+- sync `workspace/` into `~/.openclaw/workspace/`
+- create `~/.openclaw/openclaw.json` from `config/openclaw.example.json` if it does not already exist
+
+Option B:
 
 ```bash
-cp -R . ~/.openclaw/workspace/
+./scripts/sync-workspace.sh
 ```
 
-If they want this repo to be the live workspace directly, they can also clone it to:
-
-```bash
-~/.openclaw/workspace
-```
+This only updates the workspace files.
 
 ## Skill Directory Rule
 
-This is the most important convention in this project.
+This is the most important rule in the project.
 
-**All shared custom skills must be placed under:**
+All shared custom skills must live under:
+
+```bash
+workspace/skills/
+```
+
+After syncing, OpenClaw must see them under:
 
 ```bash
 ~/.openclaw/workspace/skills/
 ```
 
-Each skill should have its own folder, for example:
+Each skill should follow:
 
 ```text
-~/.openclaw/workspace/skills/matchmaker/SKILL.md
+workspace/skills/<skill-name>/SKILL.md
 ```
 
-That means:
+Current example:
 
-- skill root directory: `skills/<skill-name>/`
-- required entry file: `SKILL.md`
+```text
+workspace/skills/matchmaker/SKILL.md
+```
 
-For our current custom skill:
-
-- folder: `skills/matchmaker/`
-- file: `skills/matchmaker/SKILL.md`
-- skill name inside file: `matchmaking-insight-zh`
-
-If a teammate puts the skill somewhere else, OpenClaw may not load it when the workspace is active.
+If teammates put skills elsewhere, the repo may look correct while the live OpenClaw workspace will not load them.
 
 ## Current Custom Skill
 
 ### `matchmaker`
 
-Path:
+Repo path:
 
 ```text
-skills/matchmaker/SKILL.md
+workspace/skills/matchmaker/SKILL.md
+```
+
+Live installed path:
+
+```text
+~/.openclaw/workspace/skills/matchmaker/SKILL.md
 ```
 
 Purpose:
@@ -136,73 +191,30 @@ Purpose:
 - matchmaking analysis
 - dating market positioning
 - partner selection strategy
-- diagnosing mismatch between personal conditions and expectations
+- diagnosing mismatch between conditions and expectations
 
-The current trigger hints are also documented in `TOOLS.md`.
+Trigger reminders are documented in:
 
-## Suggested Workflow For Adding A New Skill
+- `workspace/TOOLS.md`
 
-1. Create a new folder under `skills/`
-2. Add a `SKILL.md`
-3. Document trigger reminders in `TOOLS.md` if needed
-4. Test it locally in the active OpenClaw workspace
-5. Commit and push to GitHub
-6. Teammates pull and sync to their own `~/.openclaw/workspace`
+## What Is Intentionally Not Committed
 
-Example:
+This repository does not include:
 
-```text
-skills/
-  my-new-skill/
-    SKILL.md
-```
+- real `~/.openclaw/openclaw.json`
+- real provider API keys
+- real gateway token
+- device auth files
+- logs
+- SQLite state files
+- temporary runtime files
+- plugin runtime caches
 
-## Files Teammates May Need To Adjust Locally
+Those belong to each teammate's own local machine.
 
-These files may contain personal or machine-specific preferences and should be reviewed after pulling:
+## Launch / Restart Notes
 
-- `USER.md`
-- `TOOLS.md`
-- `IDENTITY.md`
-- `memory/`
-
-These files should be handled carefully and not forced if they contain personal context.
-
-## Runtime Config Notes
-
-Our active runtime config is outside this repo's main purpose:
-
-```text
-~/.openclaw/openclaw.json
-```
-
-That file controls things like:
-
-- model providers
-- gateway auth
-- port binding
-- tool profile
-- plugin enablement
-
-Do **not** commit real secrets from that file to GitHub.
-
-If needed, we can later add a sanitized example such as:
-
-- `openclaw.example.json`
-
-instead of sharing real tokens.
-
-In this repo, teammates should use:
-
-- `openclaw.example.json`
-
-as the reference template, then create or update their own local:
-
-- `~/.openclaw/openclaw.json`
-
-## Launch / Restart
-
-On the current machine, OpenClaw is managed by `launchd`.
+On the reference machine, OpenClaw is managed by `launchd`.
 
 Useful commands:
 
@@ -211,19 +223,3 @@ launchctl print gui/$(id -u)/ai.openclaw.gateway
 launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plist
 ```
-
-## Collaboration Notes
-
-- Keep shared skills in `skills/`
-- Do not commit secrets
-- Prefer documenting team-wide behavior in `AGENTS.md`
-- Prefer documenting skill-specific usage in each skill's `SKILL.md`
-- Prefer documenting local trigger reminders in `TOOLS.md`
-
-## Recommended Next Improvement
-
-Before publishing this repo, consider adding:
-
-1. a short changelog for shared skill updates
-2. a simple install script to sync the repo into `~/.openclaw/workspace`
-3. a team convention for which files are shared vs personal
