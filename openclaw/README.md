@@ -103,6 +103,32 @@ Important distinction:
 
 ## Installation
 
+## Quick Start For Teammates
+
+If you already have OpenClaw installed, the shortest path is:
+
+1. Clone this repository
+2. Enter `openclaw/`
+3. Run `./scripts/install.sh`
+4. Edit `~/.openclaw/openclaw.json`
+5. Restart OpenClaw
+
+Commands:
+
+```bash
+git clone <YOUR_GITHUB_REPO_URL>
+cd <YOUR_REPO_DIR>/openclaw
+./scripts/install.sh
+```
+
+Then edit:
+
+```bash
+~/.openclaw/openclaw.json
+```
+
+and replace the placeholder token / API key values with your own.
+
 ### 1. Install OpenClaw locally
 
 Make sure these directories exist:
@@ -139,6 +165,15 @@ Option B:
 ```
 
 This only updates the workspace files.
+
+### 5. Restart OpenClaw
+
+If OpenClaw is managed by `launchd`, restart with:
+
+```bash
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+```
 
 ## Skill Directory Rule
 
