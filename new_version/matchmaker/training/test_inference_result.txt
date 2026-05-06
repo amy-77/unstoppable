@@ -1,5 +1,5 @@
 ================================================================================
-案例ID: 鳌烨101
+Case ID: 鳌烨101
 ================================================================================
 
 ────────────────────────────────────────
@@ -17,97 +17,97 @@
     "age": 32,
     "birth_year": 1994,
     "location": {
-      "city": "纽约",
+      "city": "New York",
       "tier": "overseas"
     },
-    "education": "硕士（新闻/媒体方向）",
+    "education": "Master's (Journalism/Media)",
     "career": {
-      "primary": "新闻媒体人",
+      "primary": "Journalist/Media Professional",
       "tags": [
-        "绿卡",
-        "海归",
-        "独立女性"
+        "Green Card",
+        "Overseas Returnee",
+        "Independent Woman"
       ]
     },
     "financials": {
       "annual_income_fixed": 450000,
-      "assets_desc": "名下有房，有独立存款，家庭资产A8.5级别",
+      "assets_desc": "Owns property, has independent savings, family assets at A8.5 level",
       "income_tier": "A8.5"
     },
     "physicals": {
       "height_cm": 165,
       "weight_kg": 56,
-      "appearance_comment": "有健身习惯，有明显文身，整体风格偏‘飒’",
+      "appearance_comment": "Regular fitness routine, visible tattoos, overall style leans 'edgy/cool'",
       "style_tag": "modern_cool"
     },
     "family": {
-      "background_desc": "从马来西亚移居美国，靠个人努力获得绿卡，背景深厚"
+      "background_desc": "Relocated from Malaysia to the US, obtained Green Card through personal effort, deep family background"
     }
   },
   "expectations": {
-    "requirements_desc": "寻找文化同频、能接住梗的ABC或精英华人，消费观一致，渴望有传统根基的婚姻。"
+    "requirements_desc": "Seeking culturally aligned ABC or elite Chinese professional who can match her wit, shares spending values, desires a marriage with traditional roots."
   }
 }
 
 ────────────────────────────────────────
 【MODEL OUTPUT】
 ────────────────────────────────────────
-的思考过程：
+Thinking process:
 
 <thinking>
 
-1. 画像定位：最接近「小镇做题家公主」原型，但有关键差异——她不是通过学历实现阶层跃迁后面临圈层审查，而是通过个人奋斗（移居海外→绿卡→A8.5资产）已经成功融入高净值圈层。同时带有「慕强死结女」的影子，因为她明确要求"文化同频、能接住梗的ABC或精英华人"，本质是对男性精神世界供给能力的极高要求。但她自身筹码远超典型慕强死结女（A8.5资产+海归+32岁），所以不是死锁而是精准筛选。
+1. Persona Mapping: Closest to the "Small-Town Academic Princess" archetype, but with key differences — she didn't achieve class mobility through education only to face social circle scrutiny. Instead, through personal effort (relocating overseas → Green Card → A8.5 assets), she has already successfully integrated into the high-net-worth circle. Also carries traces of the "Status-Chasing Deadlock Woman" because she explicitly demands "culturally aligned ABC or elite Chinese professional who can match her wit" — essentially an extremely high requirement for male intellectual/spiritual supply capacity. However, her own chips far exceed the typical deadlock woman (A8.5 assets + overseas returnee + age 32), so this isn't a deadlock but precision filtering.
 
-2. 市场估值：城市牌——海外（纽约）中等偏软，但A8.5家庭+绿卡+海归三重身份在海外华人圈属于顶级筹码；收入牌——45万年薪在纽约媒体圈中等偏上，但绝对值不高；学历牌——海硕+媒体方向，在精英圈层属于加分项但非顶级（顶级是MBA/金融博士）；外形牌——165cm/56kg有健身习惯，但文身+飒爽风格在传统精英圈可能被保守亚裔家庭审查；年龄牌——32岁女性在海外华人婚恋市场仍属正牌，但窗口期已过最优值，贬值时钟在加速。综合来看，她的家境和独立度是王牌，年龄和文身风格是潜在减分项。
+2. Market Valuation: City card — overseas (New York) medium-soft, but A8.5 family + Green Card + overseas returnee triple identity is top-tier in the overseas Chinese circle; Income card — 450K annual salary is above average in NYC media but not high in absolute terms; Education card — overseas Master's + media direction is a plus in elite circles but not top-tier (top-tier would be MBA/Finance PhD); Appearance card — 165cm/56kg with fitness habits, but tattoos + edgy style may trigger scrutiny from conservative Asian families; Age card — 32-year-old female in the overseas Chinese dating market is still in valid range, but past optimal window, depreciation clock accelerating. Overall: family background and independence are trump cards; age and tattoo style are potential deductions.
 
-3. 核心冲突识别：触发「圈层天花板模型」的变体——不是向上突破圈层审查，而是「精准筛选vs市场供给匹配」的结构性矛盾。她的要求（文化同频+能接梗+ABC/精英华人+传统根基）将匹配池压缩到极窄范围。在纽约华人精英圈中，同时满足"有文化深度能接住梗"和"传统根基家庭可接受文身+飒爽风格"的男性极度稀缺。这是「既要又要贪心」与「供给枯竭」的直接碰撞。
+3. Core Conflict Identification: Triggers a variant of the "Social Circle Ceiling Model" — not breaking upward through circle scrutiny, but a structural contradiction between "precision filtering vs. market supply matching." Her requirements (cultural alignment + wit-matching + ABC/elite Chinese + traditional roots) compress the matching pool to an extremely narrow range. In the NYC Chinese elite circle, males who simultaneously satisfy "cultural depth to match her wit" and "traditional family that accepts tattoos + edgy style" are extremely scarce. This is a direct collision between "wanting everything" and "supply exhaustion."
 
-4. 启发式选择：（1）「圈层渠道匹配法则」——她应该在正确的池子里找，即海外华人精英社交圈而非泛社交平台；（2）「强制三选二法则」——文化深度、传统根基、年轻有玩咖精神三者难以兼得，必须明确放弃一项；（3）「贬值时钟」——32岁+海外非一线城市的组合，如果目标男性30岁以下+ABC级+传统家庭，窗口期可能仅剩1-2年。反模式方面需警惕「慕强陷阱」的变体——将精神共鸣设为不可妥协的刚需，导致在传统家庭审查中彻底出局。
+4. Heuristic Selection: (1) "Circle-Channel Matching Principle" — she should search in the right pool, i.e., overseas Chinese elite social circles rather than general social platforms; (2) "Forced Pick-Two-of-Three Rule" — cultural depth, traditional roots, and youthful playful spirit are hard to achieve simultaneously, must explicitly abandon one; (3) "Depreciation Clock" — the 32 + overseas non-tier-1 city combination means if targeting males under 30 + ABC-level + traditional family, the window may only be 1-2 years. Anti-pattern warning: beware of a variant of the "status-chasing trap" — setting spiritual resonance as a non-negotiable hard requirement, leading to complete elimination in traditional family scrutiny.
 
-5. 策略综合：核心策略是「圈层精准定位+窗口期紧迫行动+软化传统审查壁垒」。具体路径：（1）放弃"传统根基家庭"与"文化深度能接梗"的绝对绑定，接受"家境审查松但精神世界浅"或"精神世界深但家境普通"的二分法；（2）利用A8.5家庭资源+绿卡身份，在纽约华人高端社交活动（商会、家族聚会、私人俱乐部）中主动高频曝光；（3）文身和飒爽风格是面子工程，不必隐藏，用叙事包装（"文身是身份认同表达而非叛逆"）降低审查阻力；（4）时间策略：32岁海外，必须在12-18个月内完成锁定，不能拖到34岁再找。
+5. Strategy Synthesis: Core strategy is "precise circle positioning + urgent window-period action + softening traditional scrutiny barriers." Specific path: (1) Abandon the rigid binding of "traditional family roots" with "cultural depth and wit-matching," accept the dichotomy of "loose family scrutiny but shallow spiritual world" or "deep spiritual world but ordinary family background"; (2) Leverage A8.5 family resources + Green Card identity for high-frequency exposure at NYC Chinese elite social events (chambers of commerce, family gatherings, private clubs); (3) Tattoos and edgy style are surface-level — don't hide them, use narrative packaging ("tattoos are identity expression, not rebellion") to reduce scrutiny resistance; (4) Time strategy: 32 years old overseas, must lock in within 12-18 months, cannot wait until 34 to search.
 
 </thinking>
 
 ```json
 {
  "psychology_and_traits": {
- "personality_tags": ["高知飒爽", "文化洁癖", "独立自驱", "既要又要", "传统理想主义", "圈层敏感"],
- "behavioral_logic": "用文化认同和精神共鸣作为筛选刚需，本质是将择偶从经济交易提升到身份认同验证，但自身筹码不允许无限筛选。"
+ "personality_tags": ["High-intellect edgy", "Cultural purist", "Self-driven independent", "Wants-it-all", "Traditional idealist", "Circle-sensitive"],
+ "behavioral_logic": "Uses cultural identity and spiritual resonance as hard filtering requirements — essentially elevating partner selection from economic transaction to identity validation, but her own chips don't allow unlimited filtering."
  },
  "matchmaking_intelligence": {
- "core_conflict": "对男性精神世界供给能力的极高要求（文化同频+能接梗）与同时满足'传统根基家庭可接受文身飒爽风格'的供给极度稀缺之间的结构性死锁。",
- "market_value_assessment": "王牌是A8.5家境+绿卡+海归独立度，海外华人圈属顶配；软牌是年龄32年贬值时钟已启动、文身飒爽风格触发传统家庭审查、45万年薪在纽约仅为中等偏上但非顶级。综合竞争力在海外华人高净值圈属于前15%，但在'文化深度+传统家庭'交叉池中被严重稀释。",
- "expert_strategy": "立即放弃'传统根基家庭'与'文化深度能接梗'的刚性绑定，在12-18个月内通过高端华人社交渠道高频曝光，用叙事包装文身身份认同降低审查阻力，接受精神世界浅或家境普通中的一方作为妥协。",
- "target_portrait": "28-35岁、家族资产A7-A8、海外华人背景、金融/科技/律所从业者、文化消费能力强但家境审查相对宽松（如二代或新移民精英）、外形清爽、性格偏知性但不必太闷——本质是找'有钱有圈但精神世界她能填满'的类型，而非'传统+有深度'的双全人。",
+ "core_conflict": "Structural deadlock between extremely high requirements for male intellectual/spiritual supply capacity (cultural alignment + wit-matching) and the extreme scarcity of supply that simultaneously satisfies 'traditional family that accepts tattoos and edgy style.'",
+ "market_value_assessment": "Trump cards are A8.5 family background + Green Card + overseas returnee independence, top-tier in overseas Chinese circle; Soft cards are age 32 with depreciation clock activated, tattoo/edgy style triggering traditional family scrutiny, 450K salary only above-average in NYC but not top-tier. Overall competitiveness in overseas Chinese high-net-worth circle is top 15%, but severely diluted in the 'cultural depth + traditional family' intersection pool.",
+ "expert_strategy": "Immediately abandon the rigid binding of 'traditional family roots' with 'cultural depth and wit-matching.' Within 12-18 months, achieve high-frequency exposure through elite Chinese social channels. Use narrative packaging for tattoo identity to reduce scrutiny resistance. Accept either shallow spiritual world or ordinary family background as a compromise.",
+ "target_portrait": "28-35 years old, family assets A7-A8, overseas Chinese background, finance/tech/law firm professional, strong cultural consumption ability but relatively loose family scrutiny (e.g., second-generation or new immigrant elite), clean-cut appearance, personality leans intellectual but not too reserved — essentially finding someone 'wealthy with social circles but whose spiritual world she can fill,' rather than a 'traditional + deep' complete package.",
  "logic_chain": [
- "A8.5家境+绿卡+海硕=海外华人高净值圈顶配女性，市场定价高位",
- "要求'文化同频+能接梗+ABC+传统根基'将匹配池压缩到极窄范围",
- "在该极窄池中，同时满足传统家庭审查通过和文化深度的男性供给枯竭",
- "文身+飒爽=传统家庭审查减分项，但32岁已无隐藏余地，用叙事包装是唯一解",
- "贬值时钟触发：32岁海外非一线城市，若目标男性30岁以下+ABC级+传统家境，窗口期仅剩1-2年",
- "策略核心：圈层渠道精准匹配（高端华人社交活动而非泛平台）+ 三选二做减法（放弃'传统根基家庭'刚性要求）+ 高频曝光缩短决策周期至6个月内",
- "时间表：3个月内密集参加纽约华人商会/家族活动社交，6个月内完成筛选锁定"
+ "A8.5 family + Green Card + overseas Master's = top-tier female in overseas Chinese high-net-worth circle, high market pricing",
+ "Requirements of 'cultural alignment + wit-matching + ABC + traditional roots' compress matching pool to extremely narrow range",
+ "In this narrow pool, males simultaneously passing traditional family scrutiny and having cultural depth are supply-exhausted",
+ "Tattoos + edgy style = deduction in traditional family scrutiny, but at 32 there's no room to hide, narrative packaging is the only solution",
+ "Depreciation clock triggered: 32-year-old overseas non-tier-1 city, if targeting males under 30 + ABC-level + traditional family, window is only 1-2 years",
+ "Strategy core: precise circle-channel matching (elite Chinese social events, not general platforms) + pick-two-of-three subtraction (abandon 'traditional family roots' as hard requirement) + high-frequency exposure to shorten decision cycle to within 6 months",
+ "Timeline: 3 months of intensive NYC Chinese chamber/family social events, lock in selection within 6 months"
  ]
  }
 }
 ```
 
 ────────────────────────────────────────
-【标准答案 - target_portrait】
+【Ground Truth - target_portrait】
 ────────────────────────────────────────
-首选留美多年或二代华人（ABC），具备极高文化同频度，能认同独立生活方式并包容文身史，经济上需门当户对以防被收割。
+Preferred match: Long-term US resident or second-generation Chinese American (ABC), with extremely high cultural alignment, able to embrace independent lifestyle and accept tattoo history, financially matched to prevent exploitation.
 
 ────────────────────────────────────────
-【LLM-as-Judge 评分】
+【LLM-as-Judge Evaluation】
 ────────────────────────────────────────
-各维度评分:
+Dimension scores:
   conflict_insight: 4/5
   strategy_direction: 3/5
   logic_depth: 5/5
   persona_read: 3/5
   actionability: 5/5
 
-综合均分: 4.0/5
-评价: 核心冲突识别到了独立身份与传统择偶的张力，但生成分析过度强调'做减法放弃传统根基'，与参考答案'坚守海外垂直圈层、文身作为包容度过滤器'的策略方向有偏差——参考答案认为不必妥协而是换池子，生成分析则建议主动降低标准妥协。
+Overall average: 4.0/5
+Evaluation: The core conflict correctly identifies the tension between independent identity and traditional partner-seeking. However, the generated analysis over-emphasizes "subtraction by abandoning traditional roots," diverging from the reference answer's strategy of "staying within the overseas vertical circle and using tattoos as a tolerance filter." The reference answer suggests no compromise is needed — just switch pools. The generated analysis instead recommends proactively lowering standards as compromise.
 
 ================================================================================
