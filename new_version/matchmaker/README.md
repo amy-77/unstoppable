@@ -225,7 +225,3 @@ training/
 └── logs/
 ```
 
-## TODO
-
-- [ ] Increase training data volume (currently only 182 samples)
-- [ ] Full evaluation on 100-case test set
