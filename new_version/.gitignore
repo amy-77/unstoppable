@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pid
+
+matchmaker/training/logs/
+matchmaker/training/models/
+matchmaker/training/outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
