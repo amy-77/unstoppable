@@ -2,6 +2,71 @@
 
 Distilling Claude's matchmaking analysis capabilities into a Qwen3-4B small model.
 
+## Project Description
+
+An end-to-end pipeline that distills large model (Claude) expertise into a lightweight Qwen3-4B model for matchmaking/dating analysis. The final small model runs locally with **zero inference cost**, no API calls needed, while achieving performance comparable to the teacher model (4.0/5 vs Claude's 4.67/5 on LLM-as-Judge evaluation).
+
+## Problem Statement
+
+Large language models (e.g., Claude, GPT-4) excel at complex reasoning tasks like matchmaking analysis, but deploying them in production faces three challenges:
+
+1. **Cost**: Each API call costs money; at scale this becomes prohibitive
+2. **Privacy**: Sensitive user dating profiles must be sent to third-party APIs
+3. **Latency & Availability**: Dependent on external service uptime and network
+
+Our solution addresses all three through **knowledge distillation to a small local model**:
+
+- **Zero inference cost** — Once trained, the 4B model runs on a single GPU with no API fees
+- **Privacy-safe** — All inference happens locally; no user data leaves the server
+- **Self-contained** — No external dependencies at serving time
+
+## Our Approach
+
+### Phase 1: Self-Evolving Skill Optimization
+
+We use a **self-evolve** methodology to iteratively produce an increasingly better domain skill prompt (`SKILL.md`):
+
+```
+┌─────────┐     ┌──────────┐     ┌────────┐
+│ Evaluate │ ──▶ │ Diagnose │ ──▶ │ Refine │ ──┐
+└─────────┘     └──────────┘     └────────┘   │
+      ▲                                        │
+      └────────────────────────────────────────┘
+              (repeat until convergence)
+```
+
+- Claude evaluates its own outputs, diagnoses weaknesses, and refines the skill prompt autonomously
+- After 2 rounds of self-evolution, accuracy reached **4.67/5** on our 100-case benchmark
+- The best-performing skill version is then used to generate expert-level training data
+
+### Phase 2: Expert Data Generation & Distillation
+
+Using the optimized SKILL.md, Claude generates high-quality expert reasoning reports (with `<thinking>` chains + structured JSON) for 182 training cases. These are then distilled into Qwen3-4B via LoRA SFT.
+
+### Phase 3: Local Deployment
+
+The fine-tuned 4B model is deployed as a FastAPI service — users send a case JSON and receive a full analysis in seconds, with zero ongoing cost.
+
+## Key Advantages of This Paradigm
+
+| Advantage | Description |
+|-----------|-------------|
+| **Low cost** | One-time training cost only; zero inference cost thereafter |
+| **Broad applicability** | The self-evolve → distill pipeline generalizes to any domain skill |
+| **Privacy-safe** | Training data is de-identified (encrypted key fields, hidden PII); inference is fully local |
+| **Benchmark ownership** | We constructed a proprietary matchmaking analysis benchmark (100 cases with expert ground truth) — this dataset is unique to us |
+| **Data security** | During SKILL generation and training data construction, all cases underwent privacy de-identification: real names encrypted, contact info removed, identifiable details obfuscated |
+
+## Performance Summary
+
+| Stage | Model | Score (out of 5) | Cost per inference |
+|-------|-------|-------------------|-------------------|
+| Skill v1 (before self-evolve) | Claude | 4.57 | ~$0.05/case |
+| Skill v2 (after self-evolve) | Claude | 4.67 | ~$0.05/case |
+| Distilled model | Qwen3-4B | 4.0 | $0 (local GPU) |
+
+---
+
 ## Background: How SKILL.md Was Created
 
 The core knowledge source of this project is `SKILL.md` — a domain skill prompt generated and iteratively optimized by Claude through automated refinement. It contains:
