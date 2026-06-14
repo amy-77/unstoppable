@@ -1,0 +1,19 @@
+{
+  "timestamp": "20260614_100427",
+  "lang": "zh",
+  "rounds": 1,
+  "score_trajectory": [
+    4.72
+  ],
+  "dimension_trajectory": [
+    {
+      "conflict_insight": 4.65,
+      "strategy_direction": 4.49,
+      "logic_depth": 4.95,
+      "persona_read": 4.5,
+      "actionability": 5.0
+    }
+  ],
+  "final_score": 4.72,
+  "converged": true
+}

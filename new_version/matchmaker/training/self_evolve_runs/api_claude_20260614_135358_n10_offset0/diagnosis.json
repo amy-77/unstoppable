@@ -1,0 +1,90 @@
+{
+  "weakest_dimension": "strategy_direction",
+  "root_causes": [
+    {
+      "id": "R1",
+      "evidence_case_ids": [
+        "鳌烨101",
+        "鳌烨109",
+        "鳌烨103"
+      ],
+      "finding": "策略方向系统性偏离：参考答案强调'坚守/沉淀/回归理性'等守势策略，生成分析却频繁推荐'速战速决/圈层迁移/向下兼容'等进攻策略，这是方向性分歧而非细节偏差",
+      "document_gap": "SKILL.md缺乏'打牌vs收牌'的决策树，未明确何时应暂停入场/坚守现状而非优化匹配。模型10虽提及收牌法则但未在response_style或decision_heuristics中强调其优先级"
+    },
+    {
+      "id": "R2",
+      "evidence_case_ids": [
+        "鳌烨107",
+        "鳌烨109"
+      ],
+      "finding": "高收入女性的核心短板误判：参考答案聚焦'单纯特质是致命软肋(易被收割)'和'情感能力缺失需补课'，生成分析却归因为经济条件幻觉/慕强倾向，未识别出防御能力不足的人格脆弱性风险",
+      "document_gap": "模型8(人格脆弱性-市场风险模型)存在但未在典型人物原型中体现。高收入女性原型仅描述'经济独立削弱依赖'，缺失'单纯+高资产=猎物'的风险画像"
+    },
+    {
+      "id": "R3",
+      "evidence_case_ids": [
+        "鳌烨101",
+        "鳌烨109"
+      ],
+      "finding": "目标人群画像偏离：参考答案推荐'简单画像'(如稳定输出的木讷男/温柔陪伴型)，生成分析推荐'复杂人群'(离异技术男/体制内中层/ABC圈层)，策略未聚焦'降低复杂度'原则",
+      "document_gap": "decision_heuristics缺乏'匹配复杂度管理'启发式。现有向下兼容法则仅强调阶层降维，未涵盖'选择低博弈成本对象'的维度"
+    }
+  ],
+  "improvements": [
+    {
+      "priority": 1,
+      "root_cause_id": "R1",
+      "file": "SKILL.md",
+      "section": "response_style",
+      "operation": "insert_after",
+      "anchor": "- Default to action when the task is well-scoped and reversible.",
+      "content": "- When user conditions trigger收牌signals (structural disadvantages stacking, psychological trauma unhealed, core assets below entry threshold), prioritize '暂停入场+定向增值' over market matching strategies. The decision tree: 打牌 (market-adaptive) applies when core assets are ready + psychological state is healthy; 收牌 (self-improvement) applies when ROI of immediate market entry is extremely low."
+    },
+    {
+      "priority": 2,
+      "root_cause_id": "R2",
+      "file": "SKILL.md",
+      "section": "典型人物原型",
+      "operation": "replace",
+      "old_text": "### ♀ 高薪独立女\n**画像**: 年薪30万+的职场女性\n**心理画像**: 依附类型-回避型; 核心恐惧-被依赖/失去独立性; 外显vs内在-表面强势独立, 内心对传统婚姻仍有向往但不自知; 情感模式-交易型, 习惯用经济能力换取关系主导权\n**核心矛盾**: 经济独立削弱了对男性的依赖需求，导致匹配池极度收窄\n**策略建议**: 放弃用经济条件筛选对等男性，向下兼容寻找收入略低但情绪价值供给强的男性",
+      "new_text": "### ♀ 高薪独立女\n**画像**: 年薪30万+的职场女性\n**心理画像**: 依附类型-回避型; 核心恐惧-被依赖/失去独立性; 外显vs内在-表面强势独立, 内心对传统婚姻仍有向往但不自知; 情感模式-交易型, 习惯用经济能力换取关系主导权\n**核心矛盾**: 经济独立削弱了对男性的依赖需求，导致匹配池极度收窄\n**风险亚型-单纯高收入女**: 若叠加单纯/钝感特质，核心风险从'匹配难'转为'易被收割'。高资产+低防御=猎物画像，情感操纵者/PUA/骗婚风险极高\n**策略建议**: 标准型-向下兼容寻找收入略低但情绪价值供给强的男性; 单纯亚型-优先建立社交审计能力和防御机制，必要时暂停入场先补足识人技能"
+    },
+    {
+      "priority": 3,
+      "root_cause_id": "R2",
+      "file": "SKILL.md",
+      "section": "核心心智模型",
+      "operation": "insert_after",
+      "anchor": "**局限**：若求偶者虽单纯但社交圈层本身安全度高（如体制内封闭圈层），收割风险会显著降低",
+      "content": "\n### 模型8应用优先级\n当高收入女性(A6+)反复遇到'条件好但人品差'的对象，或被评价为'好骗'时，优先触发模型8而非模型1(价值错配)。策略方向应从'扩大匹配面'翻转为'收窄+建立防御+审计能力培训'，极端情况下建议暂停入场3-6个月专注防御能力建设。"
+    },
+    {
+      "priority": 4,
+      "root_cause_id": "R3",
+      "file": "SKILL.md",
+      "section": "决策启发式",
+      "operation": "insert_after",
+      "anchor": "- 案例佐证：高情绪价值男性可向上兼容找家境优渥女性，因富裕圈层存在'有钱但找不到真诚陪伴'的结构性缺口",
+      "content": "\n\n16. **匹配复杂度最小化法则**: 当求偶者已存在明显短板(情感能力弱/心理创伤/家庭负担)时, 目标人群应优先选择'博弈成本低+关系简单'的对象类型, 而非试图通过复杂人群(离异带娃/跨文化/高阶层)获得资源补偿. 判断标准: 低复杂度对象特征-初婚/本地/同阶层/性格木讷温和/对物质期望不高; 高复杂度对象特征-再婚/跨阶层/强势/社交复杂/资源诉求多元.\n   - 适用场景: 情感小白/单纯钝感型/刚经历创伤的求偶者\n   - 案例佐证: 鳌烨107单纯高收入女应找'对物质没执念+性格温和'的简单对象, 而非情感博弈能力强的离异男; 鳌烨109博士生应找'木讷但稳定'的简单男性而非需要高情商应对的复杂圈层"
+    },
+    {
+      "priority": 5,
+      "root_cause_id": "R1",
+      "file": "SKILL.md",
+      "section": "决策启发式",
+      "operation": "insert_after",
+      "anchor": "- 案例佐证：鳌烨135：专家明确建议停止相亲专注增值，当前状态入场只会被低价收割",
+      "content": "\n\n**收牌vs打牌决策矩阵**:\n- 打牌(市场适配策略): 核心资产已就位 + 心理状态健康 + 市场定位清晰 → 执行渠道优化/标准调整/信号放大\n- 收牌(暂停增值策略): 结构性劣势叠加(≥2项硬伤) OR 心理创伤未愈 OR 核心资产低于入场门槛 → 执行3-12个月定向增值计划, 优先级: 收入跃迁 > 心理修复 > 外形改造 > 技能补课\n- 触发收牌的典型信号: 相亲半年以上全败/反复被同类型对象伤害/自卑到无法维护底线/市场反馈'你不适合现在找'\n\n收牌期间禁止: 降低标准硬打、病急乱投医式相亲、用'找个人就行'的心态妥协"
+    }
+  ],
+  "_meta": {
+    "created_at": "2026-06-14T14:07:42.098321",
+    "eval_report": "self_evolve_runs/api_claude_20260614_135358_n10_offset0/eval_report.json",
+    "skill_dir": "../zh",
+    "usage": {
+      "input_tokens": 86261,
+      "output_tokens": 3226
+    },
+    "raw_response": "```json\n{\n  \"weakest_dimension\": \"strategy_direction\",\n  \"root_causes\": [\n    {\n      \"id\": \"R1\",\n      \"evidence_case_ids\": [\"鳌烨101\", \"鳌烨109\", \"鳌烨103\"],\n      \"finding\": \"策略方向系统性偏离：参考答案强调'坚守/沉淀/回归理性'等守势策略，生成分析却频繁推荐'速战速决/圈层迁移/向下兼容'等进攻策略，这是方向性分歧而非细节偏差\",\n      \"document_gap\": \"SKILL.md缺乏'打牌vs收牌'的决策树，未明确何时应暂停入场/坚守现状而非优化匹配。模型10虽提及收牌法则但未在response_style或decision_heuristics中强调其优先级\"\n    },\n    {\n      \"id\": \"R2\",\n      \"evidence_case_ids\": [\"鳌烨107\", \"鳌烨109\"],\n      \"finding\": \"高收入女性的核心短板误判：参考答案聚焦'单纯特质是致命软肋(易被收割)'和'情感能力缺失需补课'，生成分析却归因为经济条件幻觉/慕强倾向，未识别出防御能力不足的人格脆弱性风险\",\n      \"document_gap\": \"模型8(人格脆弱性-市场风险模型)存在但未在典型人物原型中体现。高收入女性原型仅描述'经济独立削弱依赖'，缺失'单纯+高资产=猎物'的风险画像\"\n    },\n    {\n      \"id\": \"R3\",\n      \"evidence_case_ids\": [\"鳌烨101\", \"鳌烨109\"],\n      \"finding\": \"目标人群画像偏离：参考答案推荐'简单画像'(如稳定输出的木讷男/温柔陪伴型)，生成分析推荐'复杂人群'(离异技术男/体制内中层/ABC圈层)，策略未聚焦'降低复杂度'原则\",\n      \"document_gap\": \"decision_heuristics缺乏'匹配复杂度管理'启发式。现有向下兼容法则仅强调阶层降维，未涵盖'选择低博弈成本对象'的维度\"\n    }\n  ],\n  \"improvements\": [\n    {\n      \"priority\": 1,\n      \"root_cause_id\": \"R1\",\n      \"file\": \"SKILL.md\",\n      \"section\": \"response_style\",\n      \"operation\": \"insert_after\",\n      \"anchor\": \"- Default to action when the task is well-scoped and reversible.\",\n      \"content\": \"- When user conditions trigger收牌signals (structural disadvantages stacking, psychological trauma unhealed, core assets below entry threshold), prioritize '暂停入场+定向增值' over market matching strategies. The decision tree: 打牌 (market-adaptive) applies when core assets are ready + psychological state is healthy; 收牌 (self-improvement) applies when ROI of immediate market entry is extremely low.\"\n    },\n    {\n      \"priority\": 2,\n      \"root_cause_id\": \"R2\",\n      \"file\": \"SKILL.md\",\n      \"section\": \"典型人物原型\",\n      \"operation\": \"replace\",\n      \"old_text\": \"### ♀ 高薪独立女\\n**画像**: 年薪30万+的职场女性\\n**心理画像**: 依附类型-回避型; 核心恐惧-被依赖/失去独立性; 外显vs内在-表面强势独立, 内心对传统婚姻仍有向往但不自知; 情感模式-交易型, 习惯用经济能力换取关系主导权\\n**核心矛盾**: 经济独立削弱了对男性的依赖需求，导致匹配池极度收窄\\n**策略建议**: 放弃用经济条件筛选对等男性，向下兼容寻找收入略低但情绪价值供给强的男性\",\n      \"new_text\": \"### ♀ 高薪独立女\\n**画像**: 年薪30万+的职场女性\\n**心理画像**: 依附类型-回避型; 核心恐惧-被依赖/失去独立性; 外显vs内在-表面强势独立, 内心对传统婚姻仍有向往但不自知; 情感模式-交易型, 习惯用经济能力换取关系主导权\\n**核心矛盾**: 经济独立削弱了对男性的依赖需求，导致匹配池极度收窄\\n**风险亚型-单纯高收入女**: 若叠加单纯/钝感特质，核心风险从'匹配难'转为'易被收割'。高资产+低防御=猎物画像，情感操纵者/PUA/骗婚风险极高\\n**策略建议**: 标准型-向下兼容寻找收入略低但情绪价值供给强的男性; 单纯亚型-优先建立社交审计能力和防御机制，必要时暂停入场先补足识人技能\"\n    },\n    {\n      \"priority\": 3,\n      \"root_cause_id\": \"R2\",\n      \"file\": \"SKILL.md\",\n      \"section\": \"核心心智模型\",\n      \"operation\": \"insert_after\",\n      \"anchor\": \"**局限**：若求偶者虽单纯但社交圈层本身安全度高（如体制内封闭圈层），收割风险会显著降低\",\n      \"content\": \"\\n### 模型8应用优先级\\n当高收入女性(A6+)反复遇到'条件好但人品差'的对象，或被评价为'好骗'时，优先触发模型8而非模型1(价值错配)。策略方向应从'扩大匹配面'翻转为'收窄+建立防御+审计能力培训'，极端情况下建议暂停入场3-6个月专注防御能力建设。\"\n    },\n    {\n      \"priority\": 4,\n      \"root_cause_id\": \"R3\",\n      \"file\": \"SKILL.md\",\n      \"section\": \"决策启发式\",\n      \"operation\": \"insert_after\",\n      \"anchor\": \"- 案例佐证：高情绪价值男性可向上兼容找家境优渥女性，因富裕圈层存在'有钱但找不到真诚陪伴'的结构性缺口\",\n      \"content\": \"\\n\\n16. **匹配复杂度最小化法则**: 当求偶者已存在明显短板(情感能力弱/心理创伤/家庭负担)时, 目标人群应优先选择'博弈成本低+关系简单'的对象类型, 而非试图通过复杂人群(离异带娃/跨文化/高阶层)获得资源补偿. 判断标准: 低复杂度对象特征-初婚/本地/同阶层/性格木讷温和/对物质期望不高; 高复杂度对象特征-再婚/跨阶层/强势/社交复杂/资源诉求多元.\\n   - 适用场景: 情感小白/单纯钝感型/刚经历创伤的求偶者\\n   - 案例佐证: 鳌烨107单纯高收入女应找'对物质没执念+性格温和'的简单对象, 而非情感博弈能力强的离异男; 鳌烨109博士生应找'木讷但稳定'的简单男性而非需要高情商应对的复杂圈层\"\n    },\n    {\n      \"priority\": 5,\n      \"root_cause_id\": \"R1\",\n      \"file\": \"SKILL.md\",\n      \"section\": \"决策启发式\",\n      \"operation\": \"insert_after\",\n      \"anchor\": \"- 案例佐证：鳌烨135：专家明确建议停止相亲专注增值，当前状态入场只会被低价收割\",\n      \"content\": \"\\n\\n**收牌vs打牌决策矩阵**:\\n- 打牌(市场适配策略): 核心资产已就位 + 心理状态健康 + 市场定位清晰 → 执行渠道优化/标准调整/信号放大\\n- 收牌(暂停增值策略): 结构性劣势叠加(≥2项硬伤) OR 心理创伤未愈 OR 核心资产低于入场门槛 → 执行3-12个月定向增值计划, 优先级: 收入跃迁 > 心理修复 > 外形改造 > 技能补课\\n- 触发收牌的典型信号: 相亲半年以上全败/反复被同类型对象伤害/自卑到无法维护底线/市场反馈'你不适合现在找'\\n\\n收牌期间禁止: 降低标准硬打、病急乱投医式相亲、用'找个人就行'的心态妥协\"\n    }\n  ]\n}\n```"
+  }
+}
