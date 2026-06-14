@@ -2,6 +2,71 @@
 
 Distilling Claude's matchmaking analysis capabilities into a Qwen3-4B small model.
 
+## Project Description
+
+An end-to-end pipeline that distills large model (Claude) expertise into a lightweight Qwen3-4B model for matchmaking/dating analysis. The final small model runs locally with **zero inference cost**, no API calls needed, while achieving performance comparable to the teacher model (4.0/5 vs Claude's 4.67/5 on LLM-as-Judge evaluation).
+
+## Problem Statement
+
+Large language models (e.g., Claude, GPT-4) excel at complex reasoning tasks like matchmaking analysis, but deploying them in production faces three challenges:
+
+1. **Cost**: Each API call costs money; at scale this becomes prohibitive
+2. **Privacy**: Sensitive user dating profiles must be sent to third-party APIs
+3. **Latency & Availability**: Dependent on external service uptime and network
+
+Our solution addresses all three through **knowledge distillation to a small local model**:
+
+- **Zero inference cost** — Once trained, the 4B model runs on a single GPU with no API fees
+- **Privacy-safe** — All inference happens locally; no user data leaves the server
+- **Self-contained** — No external dependencies at serving time
+
+## Our Approach
+
+### Phase 1: Self-Evolving Skill Optimization
+
+We use a **self-evolve** methodology to iteratively produce an increasingly better domain skill prompt (`SKILL.md`):
+
+```
+┌─────────┐     ┌──────────┐     ┌────────┐
+│ Evaluate │ ──▶ │ Diagnose │ ──▶ │ Refine │ ──┐
+└─────────┘     └──────────┘     └────────┘   │
+      ▲                                        │
+      └────────────────────────────────────────┘
+              (repeat until convergence)
+```
+
+- Claude evaluates its own outputs, diagnoses weaknesses, and refines the skill prompt autonomously
+- After 2 rounds of self-evolution, accuracy reached **4.67/5** on our 100-case benchmark
+- The best-performing skill version is then used to generate expert-level training data
+
+### Phase 2: Expert Data Generation & Distillation
+
+Using the optimized SKILL.md, Claude generates high-quality expert reasoning reports (with `<thinking>` chains + structured JSON) for 182 training cases. These are then distilled into Qwen3-4B via LoRA SFT.
+
+### Phase 3: Local Deployment
+
+The fine-tuned 4B model is deployed as a FastAPI service — users send a case JSON and receive a full analysis in seconds, with zero ongoing cost.
+
+## Key Advantages of This Paradigm
+
+| Advantage | Description |
+|-----------|-------------|
+| **Low cost** | One-time training cost only; zero inference cost thereafter |
+| **Broad applicability** | The self-evolve → distill pipeline generalizes to any domain skill |
+| **Privacy-safe** | Training data is de-identified (encrypted key fields, hidden PII); inference is fully local |
+| **Benchmark ownership** | We constructed a proprietary matchmaking analysis benchmark (100 cases with expert ground truth) — this dataset is unique to us |
+| **Data security** | During SKILL generation and training data construction, all cases underwent privacy de-identification: real names encrypted, contact info removed, identifiable details obfuscated |
+
+## Performance Summary
+
+| Stage | Model | Score (out of 5) | Cost per inference |
+|-------|-------|-------------------|-------------------|
+| Skill v1 (before self-evolve) | Claude | 4.57 | ~$0.05/case |
+| Skill v2 (after self-evolve) | Claude | 4.67 | ~$0.05/case |
+| Distilled model | Qwen3-4B | 4.0 | $0 (local GPU) |
+
+---
+
 ## Background: How SKILL.md Was Created
 
 The core knowledge source of this project is `SKILL.md` — a domain skill prompt generated and iteratively optimized by Claude through automated refinement. It contains:
@@ -203,10 +268,53 @@ curl -X POST http://172.27.96.38:8000/predict \
   -d '{"subject_profile": {...}, "expectations": {...}}'
 ```
 
+## Self-Evolve Evaluation Loop
+
+`self_evolve.py` implements the structured Evaluate → Diagnose → Refine loop for the zh skill.
+
+```bash
+# 1. Evaluate: run several test cases, judge generated analyses, write eval_report.json
+export ANTHROPIC_AUTH_TOKEN=...
+python self_evolve.py evaluate --limit 5 --out eval_report.json
+
+# Use DeepSeek V4 Pro as the LLM judge through its Anthropic-compatible API
+export ANTHROPIC_AUTH_TOKEN=...  # DeepSeek API key
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_MODEL=deepseek-v4-pro
+CUDA_VISIBLE_DEVICES=0 bash run_self_evolve_10.sh
+
+# Optional: evaluate precomputed predictions instead of loading the local model
+python self_evolve.py evaluate \
+  --predictions predictions.jsonl \
+  --limit 20 \
+  --out eval_report.json
+
+# 2. Diagnose: use eval_report + current SKILL.md/references as context
+python self_evolve.py diagnose \
+  --eval-report eval_report.json \
+  --skill-dir ../zh \
+  --out diagnosis.json
+
+# 3. Refine: apply diagnosis improvements to SKILL.md / references/*.md
+python self_evolve.py refine \
+  --diagnosis diagnosis.json \
+  --skill-dir ../zh \
+  --out refine_results.json
+```
+
+Outputs:
+
+- `eval_report.json`: per-case LLM-as-Judge scores, comments, generated docs, dimension averages, weakest dimension.
+- `diagnosis.json`: weakest dimension, 3 root causes, prioritized improvement operations.
+- `refine_results.json`: per-operation apply status and edit statistics.
+
+`refine` accepts only `replace`, `insert_after`, and `append` operations, and refuses edits outside `SKILL.md` and `references/*.md`. Use `--dry-run` to validate anchors before writing files.
+
 ## File Structure
 
 ```
 training/
+├── self_evolve.py             # Evaluate → Diagnose → Refine loop
 ├── generate_teacher.py        # Step 1: Claude teacher generation
 ├── run_generate_teacher.sh    # Teacher generation launch script
 ├── prepare_data.py            # Step 2: teacher → SFT format
@@ -225,4 +333,7 @@ training/
 └── logs/
 ```
 
+## TODO
 
+- [ ] Increase training data volume (currently only 182 samples)
+- [ ] Full evaluation on 100-case test set

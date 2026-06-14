@@ -1,0 +1,13 @@
+{
+  "overall_score": 0.0,
+  "dimension_scores": {
+    "conflict_insight": 0.0,
+    "strategy_direction": 0.0,
+    "logic_depth": 0.0,
+    "persona_read": 0.0,
+    "actionability": 0.0
+  },
+  "total_cases": 0,
+  "per_case_results": [],
+  "worst_cases": []
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-06-14T14:07:42.192585",
+  "diagnosis": "self_evolve_runs/api_claude_20260614_135358_n10_offset0/diagnosis.json",
+  "skill_dir": "../zh",
+  "dry_run": true,
+  "total": 5,
+  "applied": 3,
+  "failed": 2,
+  "changed": 3,
+  "results": [
+    {
+      "file": "SKILL.md",
+      "operation": "insert_after",
+      "priority": 1,
+      "changed": false,
+      "error": "insert_after anchor not found"
+    },
+    {
+      "file": "SKILL.md",
+      "operation": "replace",
+      "priority": 2,
+      "changed": false,
+      "error": "replace old_text not found"
+    },
+    {
+      "file": "SKILL.md",
+      "operation": "insert_after",
+      "changed": true,
+      "dry_run": true,
+      "before_chars": 13617,
+      "after_chars": 13748,
+      "priority": 3
+    },
+    {
+      "file": "SKILL.md",
+      "operation": "insert_after",
+      "changed": true,
+      "dry_run": true,
+      "before_chars": 13617,
+      "after_chars": 13931,
+      "priority": 4
+    },
+    {
+      "file": "SKILL.md",
+      "operation": "insert_after",
+      "changed": true,
+      "dry_run": true,
+      "before_chars": 13617,
+      "after_chars": 13892,
+      "priority": 5
+    }
+  ]
+}
