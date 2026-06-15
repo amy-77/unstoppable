@@ -1,0 +1,8 @@
+{
+  "round": 3,
+  "cand_score": 4.317,
+  "best_score": 4.32,
+  "gain": -0.003,
+  "decision": "reject",
+  "stop_reason": "3 consecutive rejects"
+}

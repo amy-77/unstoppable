@@ -1,0 +1,33 @@
+{
+  "best_round": 0,
+  "best_score": 4.32,
+  "best_skill_path": "/Users/yongkangzou/Desktop/ai projects/Unstoppable/unstoppable/new_version/experiments/exp1_self_evolve_effectiveness/results/self_evolve/round_00_v1/SKILL.md",
+  "reject_streak": 3,
+  "stopped": true,
+  "history": [
+    {
+      "round": 0,
+      "score": 4.32,
+      "decision": "baseline"
+    },
+    {
+      "round": 1,
+      "score": 4.186,
+      "gain": -0.134,
+      "decision": "reject"
+    },
+    {
+      "round": 2,
+      "score": 4.172,
+      "gain": -0.148,
+      "decision": "reject"
+    },
+    {
+      "round": 3,
+      "score": 4.317,
+      "gain": -0.003,
+      "decision": "reject"
+    }
+  ],
+  "stop_reason": "3 consecutive rejects"
+}

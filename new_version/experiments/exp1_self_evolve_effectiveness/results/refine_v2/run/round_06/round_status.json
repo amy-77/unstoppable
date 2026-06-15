@@ -1,0 +1,11 @@
+{
+  "round": 6,
+  "decision": "accept[actionability]",
+  "best_score": 4.783,
+  "candidates": {
+    "target_portrait_match": 4.764,
+    "strategy_direction": 4.671,
+    "actionability": 4.783
+  },
+  "stop_reason": null
+}

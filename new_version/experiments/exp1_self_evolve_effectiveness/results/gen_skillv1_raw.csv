@@ -1,0 +1,4 @@
+case_id,candidate,judge,sample,parse_ok,conflict_insight,market_read_accuracy,strategy_direction,target_portrait_match,persona_read,logic_depth,insight_nonobviousness,risk_anti_pattern,actionability,A_avg,B_avg,overall,comment
+鳌烨191,skillv1,gpt-5.5,0,True,2.0,2.0,1.0,3.0,4.0,3.0,3.0,4.0,4.0,2.4,3.5,2.889,主要差距在于把专家强调的“先止损增值、避免再被婚恋收割”误判为“趁年龄红利尽快进攻离异男市场”，核心策略方向几乎相反。
+鳌烨191,skillv1,gemini-3.1-pro,0,True,1.0,1.0,1.0,1.0,3.0,3.0,1.0,3.0,3.0,1.4,2.5,1.889,待评分析完全背离了专家判断，将极度弱势的‘低龄低学历离异带娃’误判为‘离异市场顶配资产’，并给出了‘放弃赚钱优先再婚’这一极其危险且相反的战略方向。
+鳌烨191,skillv1,deepseek-v4-pro,0,True,3.0,2.0,1.0,2.0,4.0,4.0,3.0,5.0,5.0,2.4,4.25,3.222,核心方向与专家完全背离：待评分析将婚姻作为优先解，而专家坚决主张‘不推婚姻、先赚钱增值’，市场估值过度乐观，未识别出‘易受掠夺’的生存结构。
