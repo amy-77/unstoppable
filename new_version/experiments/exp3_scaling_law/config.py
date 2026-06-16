@@ -14,14 +14,15 @@ SIZES = [
     {"size": "4B",   "hf_id": "Qwen/Qwen3-4B",   "gpu": "A100-40GB"},
     {"size": "8B",   "hf_id": "Qwen/Qwen3-8B",   "gpu": "A100-80GB"},
     {"size": "14B",  "hf_id": "Qwen/Qwen3-14B",  "gpu": "A100-80GB"},
-    # 32B bf16 LoRA won't fit one 80GB → needs QLoRA (4-bit); train_sft.py needs a
-    # --load-4bit path added before this can run. H100 for speed.
-    {"size": "32B",  "hf_id": "Qwen/Qwen3-32B",  "gpu": "H100", "qlora": True},
+    # 32B bf16 LoRA (~64GB weights) won't fit one 80GB card. Keep bf16 (NOT QLoRA —
+    # 4-bit would be a scaling-law confound vs the bf16 points) and split layers
+    # across 2×H100 via naive model-parallel (train --device-map auto).
+    {"size": "32B",  "hf_id": "Qwen/Qwen3-32B",  "gpu": "H100:2"},
 ]
 
 # Order: smoke 0.6B → Phase 1 new points → 4B last → Phase 2 big (after top-up).
 PHASE1 = ["0.6B", "1.7B", "8B"]          # 4B deferred to last (re-trained on base)
-PHASE2 = ["14B", "32B"]                  # after Modal top-up; 32B needs QLoRA
+PHASE2 = ["14B", "32B"]                  # after Modal top-up; 32B = bf16 on 2×H100
 
 MODES = ["student", "baseline"]   # student = SFT'd; baseline = base model, no SFT (both with-skill)
 VOLUME = "exp3-scaling-models"    # Modal volume: base/ + outputs/ + eval_out/

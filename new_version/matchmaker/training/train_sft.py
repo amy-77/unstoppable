@@ -63,6 +63,12 @@ def parse_args():
     # Misc
     p.add_argument("--bf16", action="store_true", default=True)
     p.add_argument("--no-bf16", dest="bf16", action="store_false")
+    p.add_argument("--device-map", default="single",
+                   help="single = whole model on cuda:0 (default, fits ≤14B bf16 LoRA "
+                        "on one 80GB card) | auto = naive model-parallel, split layers "
+                        "across ALL visible GPUs (for models too big for one card, e.g. "
+                        "32B bf16 needs 2×H100). HF Trainer sees hf_device_map and runs "
+                        "model-parallel — does NOT wrap in DataParallel.")
     p.add_argument("--attn-impl", default="flash_attention_2",
                    help="attention kernel: flash_attention_2 (fast, needs flash-attn "
                         "+ GPU) | sdpa (portable fallback) | eager")
@@ -102,6 +108,11 @@ def main():
     from trl import SFTTrainer, SFTConfig
 
     set_seed(args.seed)
+
+    # Free throughput on Ampere/Hopper: allow TF32 for the fp32 matmuls that bf16
+    # training still hits (norm/optimizer fp32 paths). No accuracy impact at our scale.
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
 
     base = Path(args.base)
     if not base.exists():
@@ -152,14 +163,20 @@ def main():
 
     # ----- model (bf16, full-precision base; LoRA adds trainable adapters)
     dtype = torch.bfloat16 if args.bf16 else torch.float16
-    print(f"[model] loading {base.name}  dtype={dtype}")
+    # single = pin everything to cuda:0; auto = let HF shard layers across all
+    # visible GPUs (naive model-parallel — the only way 32B bf16 fits, on 2×H100).
+    device_map = {"": 0} if args.device_map == "single" else args.device_map
+    print(f"[model] loading {base.name}  dtype={dtype}  device_map={device_map}")
     model = AutoModelForCausalLM.from_pretrained(
         base,
         dtype=dtype,
-        device_map={"": 0},
+        device_map=device_map,
         trust_remote_code=True,
         attn_implementation=args.attn_impl,
     )
+    if getattr(model, "hf_device_map", None) is not None:
+        print(f"[model] hf_device_map spans devices: "
+              f"{sorted(set(str(d) for d in model.hf_device_map.values()))}")
     print(f"[model] attn_implementation={args.attn_impl}  use_liger={args.use_liger}")
     model.config.use_cache = False  # required for grad ckpt
     if args.gradient_checkpointing:

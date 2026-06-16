@@ -90,7 +90,8 @@ app = modal.App("exp3-scaling-train", image=image)
 
 def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
                 batch_size: int, grad_accum: int, lr: float, save_steps: int,
-                smoke: bool = False):
+                smoke: bool = False, device_map: str = "single",
+                save_merged: bool = True):
     import os
     import subprocess
     import sys
@@ -98,16 +99,21 @@ def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
     vol.reload()
     local_base = f"/models/base/{hf_id.split('/')[-1]}"
     run_name = f"smoke_{size}" if smoke else f"scale_{size}"
-    merged = f"/models/outputs/{run_name}/merged"
+    # The "this run already finished" marker: merged dir when we merge, else the
+    # adapter dir (32B saves adapter only — no 65GB merge in the pricey GPU window).
+    done_marker = (f"/models/outputs/{run_name}/merged" if save_merged
+                   else f"/models/outputs/{run_name}/adapter")
 
     # smoke = stack validation (FA2 wheel ABI + Liger Qwen3 patch); never skip on
-    # an existing merged, and run only 2 steps on 4 samples.
-    if not smoke and os.path.isdir(merged) and os.listdir(merged):
-        print(f"[train:{size}] merged already exists → skip"); return run_name
+    # an existing output, and run only 2 steps on 4 samples.
+    if not smoke and os.path.isdir(done_marker) and os.listdir(done_marker):
+        print(f"[train:{size}] {done_marker} already exists → skip"); return run_name
 
     if not (os.path.isdir(local_base) and any(f.endswith('.safetensors') for f in os.listdir(local_base))):
+        # Fallback download (prefer pre-staging via `stage` so the GPU clock never
+        # pays for this 65GB pull — see prestage()).
         from huggingface_hub import snapshot_download
-        print(f"[train:{size}] downloading {hf_id}")
+        print(f"[train:{size}] base not on volume → downloading {hf_id} (consider `stage` first)")
         snapshot_download(repo_id=hf_id, local_dir=local_base,
                           ignore_patterns=["*.pth", "*.gguf", "original/*"])
         vol.commit()
@@ -121,8 +127,12 @@ def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
         "--max-seq", str(max_seq), "--epochs", str(epochs),
         "--batch-size", str(batch_size), "--grad-accum", str(grad_accum),
         "--lr", str(lr), "--save-steps", str(save_steps),
-        "--resume", "--save-merged",
+        "--resume",
     ]
+    if device_map != "single":
+        cmd += ["--device-map", device_map]   # auto = naive MP across the visible GPUs
+    if save_merged:
+        cmd.append("--save-merged")
     if smoke:
         cmd.append("--smoke")          # 2 steps / 4 samples; --save-merged self-guards off
     print(f"[train:{size}] {' '.join(cmd)}")
@@ -158,8 +168,50 @@ def train_80(size: str, hf_id: str, smoke: bool = False, **kw):
     return _train_impl(size, hf_id, smoke=smoke, **_common(**kw))
 
 
+@app.function(gpu="H100:2", volumes={"/models": vol}, secrets=[hf_secret], timeout=6 * 3600, retries=2)
+def train_h100x2(size: str, hf_id: str, smoke: bool = False, **kw):
+    # 32B bf16 LoRA: ~64GB weights don't fit one 80GB card, so split layers across
+    # 2×H100 via naive model-parallel (--device-map auto). batch_size=1 / grad_accum=8
+    # keeps the effective batch at 8 (one pipeline; n_gpu is NOT a batch multiplier
+    # under model-parallel). Save adapter only — no 65GB merge in the 2-GPU window,
+    # and no fragile merge_and_unload across a sharded model. Eval mounts the LoRA.
+    kw.setdefault("batch_size", 1)
+    kw.setdefault("grad_accum", 8)
+    return _train_impl(size, hf_id, smoke=smoke,
+                       device_map="auto", save_merged=False, **_common(**kw))
+
+
 def _fn_for(gpu: str):
+    if gpu.startswith("H100"):
+        return train_h100x2
     return train_80 if "80GB" in gpu else train_40
+
+
+@app.function(volumes={"/models": vol}, secrets=[hf_secret], timeout=2 * 3600)
+def prestage(hf_id: str):
+    """CPU-only: pull a base model onto the volume so the GPU clock never pays for
+    the download. Idempotent — skips if the weights are already there."""
+    import os
+    from huggingface_hub import snapshot_download
+
+    vol.reload()
+    local_base = f"/models/base/{hf_id.split('/')[-1]}"
+    if os.path.isdir(local_base) and any(f.endswith('.safetensors') for f in os.listdir(local_base)):
+        print(f"[prestage] {local_base} already present → skip"); return
+    print(f"[prestage] downloading {hf_id} → {local_base} (no GPU billed)")
+    snapshot_download(repo_id=hf_id, local_dir=local_base,
+                      ignore_patterns=["*.pth", "*.gguf", "original/*"])
+    vol.commit()
+    print(f"[prestage] done → volume:{VOLUME} /base/{hf_id.split('/')[-1]}")
+
+
+@app.local_entrypoint()
+def stage(size: str = "32B"):
+    # Run this BEFORE training the big sizes: the 65GB pull happens on a cheap CPU
+    # container, then train_h100x2 finds the weights already on the volume.
+    s = by_size(size)
+    print(f"[exp3] prestage {size} ({s['hf_id']}) — CPU download to volume")
+    prestage.remote(s["hf_id"])
 
 
 @app.local_entrypoint()
