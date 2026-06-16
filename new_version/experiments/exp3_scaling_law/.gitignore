@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+# vendored flash-attn wheels (244M each) — fetched locally, never committed (GitHub 100MB cap)
+wheels/

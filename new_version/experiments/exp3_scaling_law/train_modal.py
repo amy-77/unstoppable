@@ -26,7 +26,28 @@ from config import SIZES, PHASE1, VOLUME, by_size  # noqa: E402
 DATASETS_STACK = [
     "torch==2.7.1", "transformers==4.57.6", "trl==0.23.1",
     "peft==0.19.1", "accelerate==1.14.0", "datasets==5.0.0", "sentencepiece==0.2.1",
+    "liger-kernel==0.8.0",   # fused lm_head+CE → kills the 151K-vocab logits memory bomb
+    "einops",                # flash_attn import dep (we install the wheel with --no-deps)
 ]
+
+# flash-attn 2.8.3.post1 — official cu12torch2.7 cp311 wheels, BOTH C++ ABIs.
+# Hard lesson: letting the Modal builder `pip install` straight from the GitHub
+# release URL hangs (EU builder → github releases gets throttled to a near-stall,
+# no progress, no timeout). So we vendor BOTH wheels locally (see wheels/, fetched
+# by hand) and copy them into the image; the build step then `pip install`s the one
+# matching torch's compiled ABI. No builder→github, no ABI guess.
+FA_VERSION = "2.8.3.post1"
+def _fa_whl(abi: str) -> str:
+    return f"flash_attn-{FA_VERSION}+cu12torch2.7cxx11abi{abi}-cp311-cp311-linux_x86_64.whl"
+
+# Detect torch's ABI at build time, install the matching vendored wheel (--no-deps:
+# don't let pip re-resolve against the index), then prove the import works.
+FA_INSTALL = (
+    "ABI=$(python -c \"import torch;print('TRUE' if torch._C._GLIBCXX_USE_CXX11_ABI else 'FALSE')\") && "
+    "echo \"[fa] torch cxx11abi=$ABI\" && "
+    f"pip install --no-deps /root/wheels/flash_attn-{FA_VERSION}+cu12torch2.7cxx11abi${{ABI}}-cp311-cp311-linux_x86_64.whl && "
+    "python -c \"import flash_attn, importlib.metadata as m; print('[fa] flash_attn', m.version('flash_attn'), 'import OK')\""
+)
 
 base_image = (
     modal.Image.debian_slim(python_version="3.11")
@@ -34,17 +55,26 @@ base_image = (
     .env({"HF_HOME": "/models/hf", "TOKENIZERS_PARALLELISM": "false"})
 )
 
-# Local-only: mount the shared engine + exp2's skill SFT data (guarded for container).
+# Local-only: vendor flash-attn wheels + mount the shared engine + exp2's skill SFT
+# data (guarded for container, where these local paths don't exist).
 if modal.is_local():
     HERE = pathlib.Path(__file__).resolve().parent
     NEW_VERSION = HERE.parents[1]
     TRAIN_SCRIPT = NEW_VERSION / "matchmaker" / "training" / "train_sft.py"
     EXP2_DATA = NEW_VERSION / "experiments" / "exp2_skill_vs_noskill_distill" / "data"
+    WHEELS = HERE / "wheels"
     assert TRAIN_SCRIPT.exists(), TRAIN_SCRIPT
     assert (EXP2_DATA / "sft_skill_train.jsonl").exists(), \
         "run exp2 prepare_data.py --arm skill first (sft_skill_train.jsonl missing)"
+    for abi in ("TRUE", "FALSE"):
+        assert (WHEELS / _fa_whl(abi)).exists(), \
+            f"missing vendored wheel {WHEELS / _fa_whl(abi)} — download both ABI wheels into wheels/"
     image = (
         base_image
+        # copy=True → wheels live in the image *at build time* so FA_INSTALL can use them
+        .add_local_file(str(WHEELS / _fa_whl("TRUE")), f"/root/wheels/{_fa_whl('TRUE')}", copy=True)
+        .add_local_file(str(WHEELS / _fa_whl("FALSE")), f"/root/wheels/{_fa_whl('FALSE')}", copy=True)
+        .run_commands(FA_INSTALL)
         .add_local_python_source("config")          # sibling module → importable in container
         .add_local_file(str(TRAIN_SCRIPT), "/root/train_sft.py")
         .add_local_file(str(EXP2_DATA / "sft_skill_train.jsonl"), "/root/data/sft_skill_train.jsonl")
@@ -59,17 +89,20 @@ app = modal.App("exp3-scaling-train", image=image)
 
 
 def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
-                batch_size: int, grad_accum: int, lr: float, save_steps: int):
+                batch_size: int, grad_accum: int, lr: float, save_steps: int,
+                smoke: bool = False):
     import os
     import subprocess
     import sys
 
     vol.reload()
     local_base = f"/models/base/{hf_id.split('/')[-1]}"
-    run_name = f"scale_{size}"
+    run_name = f"smoke_{size}" if smoke else f"scale_{size}"
     merged = f"/models/outputs/{run_name}/merged"
 
-    if os.path.isdir(merged) and os.listdir(merged):
+    # smoke = stack validation (FA2 wheel ABI + Liger Qwen3 patch); never skip on
+    # an existing merged, and run only 2 steps on 4 samples.
+    if not smoke and os.path.isdir(merged) and os.listdir(merged):
         print(f"[train:{size}] merged already exists → skip"); return run_name
 
     if not (os.path.isdir(local_base) and any(f.endswith('.safetensors') for f in os.listdir(local_base))):
@@ -90,6 +123,8 @@ def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
         "--lr", str(lr), "--save-steps", str(save_steps),
         "--resume", "--save-merged",
     ]
+    if smoke:
+        cmd.append("--smoke")          # 2 steps / 4 samples; --save-merged self-guards off
     print(f"[train:{size}] {' '.join(cmd)}")
     try:
         subprocess.run(cmd, check=True)
@@ -110,21 +145,30 @@ def _common(**kw):
 
 
 @app.function(gpu="A100-40GB", volumes={"/models": vol}, secrets=[hf_secret], timeout=4 * 3600, retries=2)
-def train_40(size: str, hf_id: str, **kw):
-    return _train_impl(size, hf_id, **_common(**kw))
+def train_40(size: str, hf_id: str, smoke: bool = False, **kw):
+    return _train_impl(size, hf_id, smoke=smoke, **_common(**kw))
 
 
 @app.function(gpu="A100-80GB", volumes={"/models": vol}, secrets=[hf_secret], timeout=6 * 3600, retries=2)
-def train_80(size: str, hf_id: str, **kw):
+def train_80(size: str, hf_id: str, smoke: bool = False, **kw):
     # 80GB fits batch_size=2 even with the 12K logits → ~2x faster than batch 1.
     # grad_accum=4 keeps the effective batch at 8. timeout 6h for 14B.
     kw.setdefault("batch_size", 2)
     kw.setdefault("grad_accum", 4)
-    return _train_impl(size, hf_id, **_common(**kw))
+    return _train_impl(size, hf_id, smoke=smoke, **_common(**kw))
 
 
 def _fn_for(gpu: str):
     return train_80 if "80GB" in gpu else train_40
+
+
+@app.local_entrypoint()
+def smoke(size: str = "0.6B"):
+    # Cheap stack check on the new image: FA2 wheel ABI + Liger Qwen3 patch.
+    # 2 steps / 4 samples; never skips on existing merged. ~minutes, ~$0.2.
+    s = by_size(size)
+    print(f"[exp3] SMOKE {size} ({s['hf_id']}) on {s['gpu']} — validate FA2 + Liger")
+    _fn_for(s["gpu"]).remote(size=s["size"], hf_id=s["hf_id"], smoke=True)
 
 
 @app.local_entrypoint()

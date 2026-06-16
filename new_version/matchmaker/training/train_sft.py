@@ -63,6 +63,13 @@ def parse_args():
     # Misc
     p.add_argument("--bf16", action="store_true", default=True)
     p.add_argument("--no-bf16", dest="bf16", action="store_false")
+    p.add_argument("--attn-impl", default="flash_attention_2",
+                   help="attention kernel: flash_attention_2 (fast, needs flash-attn "
+                        "+ GPU) | sdpa (portable fallback) | eager")
+    p.add_argument("--use-liger", action="store_true", default=True,
+                   help="fuse lm_head+cross-entropy via Liger kernel — avoids "
+                        "materializing the [seq, 151K-vocab] logits (the memory bomb)")
+    p.add_argument("--no-liger", dest="use_liger", action="store_false")
     p.add_argument("--save-merged", action="store_true",
                    help="also save a fully merged (LoRA-merged) model")
     p.add_argument("--smoke", action="store_true",
@@ -151,8 +158,9 @@ def main():
         dtype=dtype,
         device_map={"": 0},
         trust_remote_code=True,
-        attn_implementation="sdpa",
+        attn_implementation=args.attn_impl,
     )
+    print(f"[model] attn_implementation={args.attn_impl}  use_liger={args.use_liger}")
     model.config.use_cache = False  # required for grad ckpt
     if args.gradient_checkpointing:
         model.gradient_checkpointing_enable(
@@ -217,6 +225,7 @@ def main():
         max_length=args.max_seq,
         packing=False,                      # short-form data, no packing
         assistant_only_loss=True,           # mask user+system tokens from loss
+        use_liger_kernel=args.use_liger,    # fuse lm_head+CE → no full logits tensor
         max_steps=2 if args.smoke else -1,
     )
 
