@@ -20,5 +20,16 @@
     "lift_overall": 0.74,
     "n_student": 59,
     "n_baseline": 56
+  },
+  "8B": {
+    "student_overall": 3.596,
+    "student_A": 3.449,
+    "student_B": 3.781,
+    "baseline_overall": 2.684,
+    "baseline_A": 2.725,
+    "baseline_B": 2.633,
+    "lift_overall": 0.912,
+    "n_student": 60,
+    "n_baseline": 60
   }
 }
