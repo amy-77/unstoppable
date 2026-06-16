@@ -1,0 +1,24 @@
+{
+  "0.6B": {
+    "student_overall": 1.724,
+    "student_A": 1.639,
+    "student_B": 1.832,
+    "baseline_overall": 1.481,
+    "baseline_A": 1.583,
+    "baseline_B": 1.353,
+    "lift_overall": 0.243,
+    "n_student": 50,
+    "n_baseline": 59
+  },
+  "1.7B": {
+    "student_overall": 2.559,
+    "student_A": 2.473,
+    "student_B": 2.667,
+    "baseline_overall": 1.819,
+    "baseline_A": 1.928,
+    "baseline_B": 1.683,
+    "lift_overall": 0.74,
+    "n_student": 59,
+    "n_baseline": 56
+  }
+}
