@@ -1,0 +1,34 @@
+{
+  "skill": {
+    "conflict_insight": 3.444,
+    "market_read_accuracy": 3.607,
+    "strategy_direction": 3.242,
+    "target_portrait_match": 3.365,
+    "persona_read": 3.371,
+    "logic_depth": 3.5,
+    "insight_nonobviousness": 3.528,
+    "risk_anti_pattern": 3.854,
+    "actionability": 3.753,
+    "A_avg": 3.406,
+    "B_avg": 3.659,
+    "overall": 3.518,
+    "n_scores": 178,
+    "n_cases": 60
+  },
+  "noskill": {
+    "conflict_insight": 3.022,
+    "market_read_accuracy": 3.033,
+    "strategy_direction": 2.55,
+    "target_portrait_match": 2.878,
+    "persona_read": 3.061,
+    "logic_depth": 3.106,
+    "insight_nonobviousness": 2.744,
+    "risk_anti_pattern": 3.0,
+    "actionability": 3.011,
+    "A_avg": 2.909,
+    "B_avg": 2.965,
+    "overall": 2.934,
+    "n_scores": 180,
+    "n_cases": 60
+  }
+}
