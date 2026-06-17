@@ -1,0 +1,40 @@
+{
+  "best_round": 4,
+  "best_score": 4.72,
+  "best_skill_path": "/Users/yongkangzou/Desktop/ai projects/Unstoppable/unstoppable/new_version/experiments/exp1_self_evolve_effectiveness/results/bootstrap/round_04/SKILL.md",
+  "noskill_score": 4.132,
+  "reject_streak": 0,
+  "stopped": true,
+  "history": [
+    {
+      "round": 0,
+      "score": 4.132,
+      "decision": "noskill_baseline"
+    },
+    {
+      "round": 1,
+      "score": 4.632,
+      "gain": 0.5,
+      "decision": "accept"
+    },
+    {
+      "round": 2,
+      "score": 4.631,
+      "gain": -0.001,
+      "decision": "reject"
+    },
+    {
+      "round": 3,
+      "score": 4.719,
+      "gain": 0.087,
+      "decision": "accept"
+    },
+    {
+      "round": 4,
+      "score": 4.72,
+      "gain": 0.001,
+      "decision": "accept"
+    }
+  ],
+  "stop_reason": "gain 0.001 < 0.03"
+}

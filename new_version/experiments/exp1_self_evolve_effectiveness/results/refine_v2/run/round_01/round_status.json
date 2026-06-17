@@ -1,0 +1,9 @@
+{
+  "round": 1,
+  "decision": "accept[genesis]",
+  "best_score": 4.607,
+  "candidates": {
+    "genesis": 4.607
+  },
+  "stop_reason": null
+}

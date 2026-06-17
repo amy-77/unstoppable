@@ -1,0 +1,8 @@
+{
+  "round": 4,
+  "cand_score": 4.72,
+  "best_score": 4.72,
+  "gain": 0.001,
+  "decision": "accept",
+  "stop_reason": "gain 0.001 < 0.03"
+}

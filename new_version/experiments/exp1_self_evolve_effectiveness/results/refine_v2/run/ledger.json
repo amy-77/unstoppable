@@ -1,0 +1,114 @@
+{
+  "best_round": 8,
+  "best_score": 4.839,
+  "best_skill_path": "/Users/yongkangzou/Desktop/ai projects/Unstoppable/unstoppable/new_version/experiments/exp1_self_evolve_effectiveness/results/refine_v2/run/round_08/SKILL_market_read_accuracy.md",
+  "noskill_score": 4.115,
+  "rejected": {
+    "conflict_insight": [],
+    "market_read_accuracy": [],
+    "strategy_direction": [],
+    "target_portrait_match": [],
+    "persona_read": [],
+    "logic_depth": [],
+    "insight_nonobviousness": [],
+    "risk_anti_pattern": [],
+    "actionability": []
+  },
+  "stopped": false,
+  "history": [
+    {
+      "round": 0,
+      "score": 4.115,
+      "decision": "noskill_baseline",
+      "dims": {
+        "conflict_insight": 4.292,
+        "market_read_accuracy": 4.15,
+        "strategy_direction": 3.808,
+        "target_portrait_match": 4.158,
+        "persona_read": 4.333,
+        "logic_depth": 4.45,
+        "insight_nonobviousness": 3.783,
+        "risk_anti_pattern": 3.808,
+        "actionability": 4.25
+      }
+    },
+    {
+      "round": 1,
+      "score": 4.607,
+      "decision": "accept[genesis]",
+      "candidates": {
+        "genesis": 4.607
+      }
+    },
+    {
+      "round": 2,
+      "score": 4.654,
+      "decision": "accept[market_read_accuracy]",
+      "candidates": {
+        "market_read_accuracy": 4.654,
+        "strategy_direction": 4.631,
+        "target_portrait_match": 4.584
+      }
+    },
+    {
+      "round": 3,
+      "score": 4.724,
+      "decision": "accept[target_portrait_match]",
+      "candidates": {
+        "target_portrait_match": 4.724,
+        "market_read_accuracy": 4.682,
+        "strategy_direction": 4.661
+      }
+    },
+    {
+      "round": 4,
+      "score": 4.763,
+      "decision": "accept[strategy_direction]",
+      "candidates": {
+        "target_portrait_match": 4.731,
+        "strategy_direction": 4.763,
+        "market_read_accuracy": 4.684
+      }
+    },
+    {
+      "round": 5,
+      "score": 4.776,
+      "decision": "accept[strategy_direction]",
+      "candidates": {
+        "strategy_direction": 4.776,
+        "target_portrait_match": 4.743,
+        "conflict_insight": 4.733
+      }
+    },
+    {
+      "round": 6,
+      "score": 4.783,
+      "decision": "accept[actionability]",
+      "candidates": {
+        "target_portrait_match": 4.764,
+        "strategy_direction": 4.671,
+        "actionability": 4.783
+      }
+    },
+    {
+      "round": 7,
+      "score": 4.822,
+      "decision": "accept[market_read_accuracy]",
+      "candidates": {
+        "target_portrait_match": 4.81,
+        "market_read_accuracy": 4.822,
+        "strategy_direction": 4.774
+      }
+    },
+    {
+      "round": 8,
+      "score": 4.839,
+      "decision": "accept[market_read_accuracy]",
+      "candidates": {
+        "target_portrait_match": 4.772,
+        "market_read_accuracy": 4.839,
+        "strategy_direction": 4.821
+      }
+    }
+  ]
+}

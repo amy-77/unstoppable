@@ -1,0 +1,11 @@
+{
+  "round": 4,
+  "decision": "accept[strategy_direction]",
+  "best_score": 4.763,
+  "candidates": {
+    "target_portrait_match": 4.731,
+    "strategy_direction": 4.763,
+    "market_read_accuracy": 4.684
+  },
+  "stop_reason": null
+}
