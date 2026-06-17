@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# Derived SFT files (regenerable from teacher_*.jsonl via prepare_data.py; ~14MB)
+data/sft_*.jsonl

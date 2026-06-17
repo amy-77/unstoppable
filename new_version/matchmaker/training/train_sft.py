@@ -74,6 +74,9 @@ def parse_args():
                    help="print metrics every N optimizer steps (loss appears at these intervals)")
     p.add_argument("--save-steps", type=int, default=50)
     p.add_argument("--eval-steps", type=int, default=20)
+    p.add_argument("--resume", action="store_true",
+                   help="resume from the last checkpoint in run_dir if one exists "
+                        "(step-level resume; safe no-op when none found)")
     return p.parse_args()
 
 
@@ -243,8 +246,14 @@ def main():
         callbacks=[LossPrinterCallback()],
     )
 
+    resume_ckpt = None
+    if args.resume:
+        from transformers.trainer_utils import get_last_checkpoint
+        resume_ckpt = get_last_checkpoint(str(run_dir)) if run_dir.exists() else None
+        print(f"[resume] last checkpoint: {resume_ckpt or 'none — starting fresh'}")
+
     print("[train] starting...")
-    trainer.train()
+    trainer.train(resume_from_checkpoint=resume_ckpt)
 
     # ----- save adapter
     adapter_dir = run_dir / "adapter"
