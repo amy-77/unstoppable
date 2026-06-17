@@ -1,0 +1,68 @@
+{
+  "0.6B": {
+    "student_overall": 1.724,
+    "student_A": 1.639,
+    "student_B": 1.832,
+    "baseline_overall": 1.481,
+    "baseline_A": 1.583,
+    "baseline_B": 1.353,
+    "lift_overall": 0.243,
+    "n_student": 50,
+    "n_baseline": 59
+  },
+  "1.7B": {
+    "student_overall": 2.559,
+    "student_A": 2.473,
+    "student_B": 2.667,
+    "baseline_overall": 1.819,
+    "baseline_A": 1.928,
+    "baseline_B": 1.683,
+    "lift_overall": 0.74,
+    "n_student": 59,
+    "n_baseline": 56
+  },
+  "4B": {
+    "student_overall": 3.307,
+    "student_A": 3.189,
+    "student_B": 3.455,
+    "baseline_overall": 2.271,
+    "baseline_A": 2.381,
+    "baseline_B": 2.134,
+    "lift_overall": 1.036,
+    "n_student": 59,
+    "n_baseline": 56
+  },
+  "8B": {
+    "student_overall": 3.596,
+    "student_A": 3.449,
+    "student_B": 3.781,
+    "baseline_overall": 2.684,
+    "baseline_A": 2.725,
+    "baseline_B": 2.633,
+    "lift_overall": 0.912,
+    "n_student": 60,
+    "n_baseline": 60
+  },
+  "14B": {
+    "student_overall": 3.762,
+    "student_A": 3.597,
+    "student_B": 3.968,
+    "baseline_overall": 2.877,
+    "baseline_A": 2.919,
+    "baseline_B": 2.824,
+    "lift_overall": 0.885,
+    "n_student": 60,
+    "n_baseline": 60
+  },
+  "32B": {
+    "student_overall": 4.127,
+    "student_A": 3.977,
+    "student_B": 4.314,
+    "baseline_overall": 2.905,
+    "baseline_A": 2.985,
+    "baseline_B": 2.804,
+    "lift_overall": 1.222,
+    "n_student": 60,
+    "n_baseline": 60
+  }
+}
