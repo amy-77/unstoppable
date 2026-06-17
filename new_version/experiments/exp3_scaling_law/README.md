@@ -110,6 +110,13 @@ Results (held-out 60, **base Qwen3 dense, same lineage**, with-skill):
 | 14B | 2.877 | 3.762 | +0.885 | 60 / 60 |
 | **32B** | 2.905 | 4.127 | **+1.222** | 60 / 60 |
 
+![Distillation lift vs model size](figures/fig_scaling_lift.png)
+
+*Left: student (SFT'd) vs baseline (no SFT, skill in prompt), both with-skill — the shaded gap
+is the lift; the baseline plateaus at 14B→32B while the student keeps climbing. Right: the lift
+curve — rises to a 4B local peak, dips at 8B/14B, then breaks above the 4B peak at 32B.
+Regenerate with `python experiments/exp3_scaling_law/plot_scaling.py`.*
+
 **Headline: the distillation lift is NON-MONOTONIC in size — the earlier "inverted-U" is
 overturned by 32B.** Through 14B the lift looked like a clean inverted-U (peak 4B +1.04, then
 8B +0.91, 14B +0.89). **32B breaks it: lift = +1.22, above the 4B peak** — the lift does not
@@ -123,14 +130,18 @@ keep tapering with size.
   (3.762→4.127, +0.365) → lift widens to +1.22. The big model exploits the distilled data
   *more*, not less, because its in-context baseline has stopped improving.
 
-**Shape is underdetermined — don't overclaim.** Two readings fit the 6 points: (a) *peak–dip–
-peak* (genuine non-monotonicity), or (b) *lift broadly rises with log-params*, with 8B–14B a
-closely-spaced near-plateau that only looks like a dip. The x-axis is uneven: **14B→32B is a
-~2.3× parameter jump** (second-biggest step on the curve) vs only ~1.75× for 8B→14B, so part
-of the 32B rise is simply a bigger step along size — the reversal may be less abrupt than the
-table suggests. A point near ~20–24B and/or repeat seeds would separate (a) from (b). With 6
-unevenly-spaced points and one seed we report only: **the lift is not an inverted-U; it
-exceeds the 4B peak at 32B; the exact curve shape is open.**
+**The reversal is real; the curve's shape *between* 14B and 32B is what's unsampled.**
+A natural worry: the x-axis is uneven (14B→32B is ~2.3× params vs only ~1.75× for 8B→14B,
+the smallest step), so isn't the 32B rise just "a bigger step along size"? No — normalize the
+lift change by the log-param step and the **per-log₂ slope flips sign**: roughly flat-to-
+negative over 4B→8B→14B (≈ −0.12, −0.03 per log₂) then **strongly positive over 14B→32B
+(≈ +0.28 per log₂)**. A bigger step along a flat/declining curve would predict a bigger
+*decline*, not a rise, so the upturn is **not** a spacing artifact (and on the log x-axis a
+scaling law should use, it's a *steep* turn, not a gentle one). What the wide gap *does* leave
+open: with no point between 14B and 32B we can't locate the trough (≈8–14B vs further out) or
+tell whether the climb is smooth. So we report only: **the lift is not an inverted-U — it
+turns back up and passes the 4B peak by 32B; a ~18–24B point + repeat seeds would pin the
+exact shape.**
 
 (An earlier 3-point read [0.6/1.7/8B] looked monotonic; the clean **base** 4B point revealed a
 local peak; 14B looked like a confirmed decline; 32B overturned it. exp2's 4B was
