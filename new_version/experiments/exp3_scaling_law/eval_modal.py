@@ -52,17 +52,35 @@ def _chatml(system: str, user: str) -> str:
 
 
 def _gen_impl(size: str, hf_id: str, mode: str, system_prompt: str,
-              items: list[dict], max_tokens: int = 2560, chunk_size: int = 30):
+              items: list[dict], max_tokens: int = 2560, chunk_size: int = 30,
+              tp_size: int = 1):
     import json as _json
     import os
 
     from vllm import LLM, SamplingParams
+    from vllm.lora.request import LoRARequest
 
     vol.reload()
+    lora_path = None
     if mode == "student":
-        model_path = f"/models/outputs/scale_{size}/merged"
-        if not os.path.isdir(model_path):
-            raise RuntimeError(f"student model missing: {model_path} (train {size} first)")
+        merged = f"/models/outputs/scale_{size}/merged"
+        adapter = f"/models/outputs/scale_{size}/adapter"
+        if os.path.isdir(merged) and os.listdir(merged):
+            model_path = merged                       # ≤14B: merged student model
+        elif os.path.isdir(adapter) and os.listdir(adapter):
+            # 32B: adapter-only (no merge in the train window). Serve base + LoRA via
+            # vLLM — numerically identical to a merged model, so the 32B point stays
+            # comparable to the merged sizes.
+            model_path = f"/models/base/{hf_id.split('/')[-1]}"
+            lora_path = adapter
+            if not (os.path.isdir(model_path) and any(f.endswith('.safetensors') for f in os.listdir(model_path))):
+                from huggingface_hub import snapshot_download
+                print(f"[gen:{size}:{mode}] base for adapter missing → downloading {hf_id}")
+                snapshot_download(repo_id=hf_id, local_dir=model_path,
+                                  ignore_patterns=["*.pth", "*.gguf", "original/*"])
+                vol.commit()
+        else:
+            raise RuntimeError(f"student missing: neither {merged} nor {adapter} (train {size} first)")
     else:  # baseline: base model, download if missing
         model_path = f"/models/base/{hf_id.split('/')[-1]}"
         if not (os.path.isdir(model_path) and any(f.endswith('.safetensors') for f in os.listdir(model_path))):
@@ -84,8 +102,13 @@ def _gen_impl(size: str, hf_id: str, mode: str, system_prompt: str,
     print(f"[gen:{size}:{mode}] total={len(items)} done={len(done)} todo={len(todo)}")
 
     if todo:
-        llm = LLM(model=model_path, dtype="bfloat16", max_model_len=14000,
-                  gpu_memory_utilization=0.90, enforce_eager=True)
+        llm_kwargs = dict(model=model_path, dtype="bfloat16", max_model_len=14000,
+                          gpu_memory_utilization=0.90, enforce_eager=True,
+                          tensor_parallel_size=tp_size)   # 32B: TP=2 across 2×H100
+        if lora_path:
+            llm_kwargs.update(enable_lora=True, max_lora_rank=16)
+        llm = LLM(**llm_kwargs)
+        lora_req = LoRARequest("student", 1, lora_path) if lora_path else None
         # repetition_penalty breaks the degeneration loops small models fall into
         # under pure greedy (e.g. 0.6B repeating a token until max_tokens → unparseable).
         # Stays near-deterministic; applied uniformly across all sizes for comparability.
@@ -93,7 +116,8 @@ def _gen_impl(size: str, hf_id: str, mode: str, system_prompt: str,
                             stop=["<|im_end|>"], repetition_penalty=1.1)
         for i in range(0, len(todo), chunk_size):
             chunk = todo[i:i + chunk_size]
-            outs = llm.generate([_chatml(system_prompt, it["user"]) for it in chunk], sp)
+            outs = llm.generate([_chatml(system_prompt, it["user"]) for it in chunk], sp,
+                                lora_request=lora_req)
             with open(vol_out, "a", encoding="utf-8") as f:
                 for it, o in zip(chunk, outs):
                     f.write(_json.dumps({"case_id": it["case_id"], "raw": o.outputs[0].text},
@@ -114,7 +138,16 @@ def gen_80(size, hf_id, mode, system_prompt, items):
     return _gen_impl(size, hf_id, mode, system_prompt, items)
 
 
+@app.function(gpu="H100:2", volumes={"/models": vol}, secrets=[hf_secret], timeout=2400, retries=2)
+def gen_h100x2(size, hf_id, mode, system_prompt, items):
+    # 32B: ~64GB weights don't fit one 80GB card for inference either → vLLM
+    # tensor-parallel across 2×H100. Student serves base + the LoRA adapter.
+    return _gen_impl(size, hf_id, mode, system_prompt, items, tp_size=2)
+
+
 def _fn_for(gpu: str):
+    if gpu.startswith("H100"):
+        return gen_h100x2
     return gen_80 if "80GB" in gpu else gen_40
 
 

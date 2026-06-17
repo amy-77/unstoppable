@@ -69,6 +69,13 @@ def parse_args():
                         "across ALL visible GPUs (for models too big for one card, e.g. "
                         "32B bf16 needs 2×H100). HF Trainer sees hf_device_map and runs "
                         "model-parallel — does NOT wrap in DataParallel.")
+    p.add_argument("--fsdp", action="store_true",
+                   help="train under FSDP full-shard (ZeRO-3): shard the frozen base "
+                        "across GPUs AND data-parallel (both cards compute) → ~2x over "
+                        "naive MP. MUST be launched via `accelerate launch "
+                        "--num_processes N`. Overrides --device-map (model is loaded "
+                        "unplaced; FSDP shards it). grad_accum is per-rank, so the "
+                        "effective batch = batch × grad_accum × N.")
     p.add_argument("--attn-impl", default="flash_attention_2",
                    help="attention kernel: flash_attention_2 (fast, needs flash-attn "
                         "+ GPU) | sdpa (portable fallback) | eager")
@@ -109,10 +116,13 @@ def main():
 
     set_seed(args.seed)
 
-    # Free throughput on Ampere/Hopper: allow TF32 for the fp32 matmuls that bf16
-    # training still hits (norm/optimizer fp32 paths). No accuracy impact at our scale.
-    torch.backends.cuda.matmul.allow_tf32 = True
-    torch.backends.cudnn.allow_tf32 = True
+    # FSDP: this MUST be in the env BEFORE from_pretrained so transformers'
+    # is_fsdp_enabled() loads weights on rank0 + meta elsewhere (ram-efficient)
+    # instead of a full 64GB copy per process. accelerate launch normally sets it
+    # from the env we export; setdefault here covers a direct invocation too.
+    if args.fsdp:
+        os.environ.setdefault("ACCELERATE_USE_FSDP", "true")
+        os.environ.setdefault("FSDP_CPU_RAM_EFFICIENT_LOADING", "true")
 
     base = Path(args.base)
     if not base.exists():
@@ -163,17 +173,19 @@ def main():
 
     # ----- model (bf16, full-precision base; LoRA adds trainable adapters)
     dtype = torch.bfloat16 if args.bf16 else torch.float16
-    # single = pin everything to cuda:0; auto = let HF shard layers across all
-    # visible GPUs (naive model-parallel — the only way 32B bf16 fits, on 2×H100).
-    device_map = {"": 0} if args.device_map == "single" else args.device_map
-    print(f"[model] loading {base.name}  dtype={dtype}  device_map={device_map}")
-    model = AutoModelForCausalLM.from_pretrained(
-        base,
-        dtype=dtype,
-        device_map=device_map,
-        trust_remote_code=True,
-        attn_implementation=args.attn_impl,
-    )
+    model_kwargs = dict(dtype=dtype, trust_remote_code=True,
+                        attn_implementation=args.attn_impl)
+    if args.fsdp:
+        # FSDP shards the model itself — it must be loaded UNplaced (no device_map).
+        # low_cpu_mem_usage + the FSDP env → rank0 loads real weights, others meta.
+        model_kwargs["low_cpu_mem_usage"] = True
+        print(f"[model] loading {base.name}  dtype={dtype}  mode=FSDP (unplaced)")
+    else:
+        # single = pin everything to cuda:0; auto = naive model-parallel split across
+        # all visible GPUs (the only way 32B bf16 fits on 2×H100 without FSDP).
+        model_kwargs["device_map"] = {"": 0} if args.device_map == "single" else args.device_map
+        print(f"[model] loading {base.name}  dtype={dtype}  device_map={model_kwargs['device_map']}")
+    model = AutoModelForCausalLM.from_pretrained(base, **model_kwargs)
     if getattr(model, "hf_device_map", None) is not None:
         print(f"[model] hf_device_map spans devices: "
               f"{sorted(set(str(d) for d in model.hf_device_map.values()))}")
@@ -196,6 +208,11 @@ def main():
         target_modules=target,
     )
     model = get_peft_model(model, lora_cfg)
+    if args.fsdp and args.gradient_checkpointing:
+        # PEFT + grad-ckpt under FSDP: the frozen base produces activations with no
+        # requires_grad, so checkpointing has nothing to recompute grads through —
+        # force the input embeddings to require grad to bridge it.
+        model.enable_input_require_grads()
     model.print_trainable_parameters()
 
     # ----- dataset
@@ -238,6 +255,22 @@ def main():
         save_total_limit=2,
         report_to="none",
         seed=args.seed,
+        # FSDP full-shard (ZeRO-3). Empty string → no FSDP (single / naive-MP path).
+        # The plugin details below are ignored unless fsdp is set. use_orig_params is
+        # REQUIRED for LoRA (mixed frozen/trainable params); FULL_STATE_DICT keeps the
+        # tiny adapter save simple (gather to rank0, no sharded checkpoint files).
+        fsdp=("full_shard auto_wrap" if args.fsdp else ""),
+        fsdp_config=({
+            "transformer_layer_cls_to_wrap": "Qwen3DecoderLayer",
+            "use_orig_params": True,
+            "sync_module_states": True,
+            "cpu_ram_efficient_loading": True,
+            "backward_prefetch": "backward_pre",
+            "forward_prefetch": False,
+            "limit_all_gathers": True,
+            "state_dict_type": "FULL_STATE_DICT",
+            "activation_checkpointing": False,   # we use HF gradient_checkpointing
+        } if args.fsdp else None),
         # SFT specifics
         max_length=args.max_seq,
         packing=False,                      # short-form data, no packing
@@ -283,12 +316,22 @@ def main():
 
     # ----- save adapter
     adapter_dir = run_dir / "adapter"
-    trainer.model.save_pretrained(adapter_dir)
-    tok.save_pretrained(adapter_dir)
-    print(f"[save] adapter → {adapter_dir}")
+    if args.fsdp:
+        # Params are sharded across ranks — trainer.save_model gathers the
+        # FULL_STATE_DICT to rank0 and writes the PEFT adapter there.
+        trainer.save_model(str(adapter_dir))
+        if trainer.accelerator.is_main_process:
+            tok.save_pretrained(adapter_dir)
+            print(f"[save] adapter (FSDP-gathered) → {adapter_dir}")
+        trainer.accelerator.wait_for_everyone()
+    else:
+        trainer.model.save_pretrained(adapter_dir)
+        tok.save_pretrained(adapter_dir)
+        print(f"[save] adapter → {adapter_dir}")
 
-    # ----- optional merged model
-    if args.save_merged and not args.smoke:
+    # ----- optional merged model (single-device path only; merging a sharded /
+    # naive-MP model is fragile, and 32B intentionally ships adapter-only)
+    if args.save_merged and not args.smoke and not args.fsdp:
         print("[merge] merging LoRA adapter into base model...")
         merged = trainer.model.merge_and_unload()
         merged_dir = run_dir / "merged"

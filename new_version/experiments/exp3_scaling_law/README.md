@@ -24,7 +24,7 @@ Per size we run **two evals**, both WITH the v2 skill in the system prompt:
 | 4B | `Qwen/Qwen3-4B` | A100-40GB | 1 |
 | 8B | `Qwen/Qwen3-8B` | A100-80GB | 1 |
 | 14B | `Qwen/Qwen3-14B` | A100-80GB | 2 (after top-up) |
-| 32B | `Qwen/Qwen3-32B` | H100 | optional big point |
+| 32B | `Qwen/Qwen3-32B` | H100:2 (FSDP) | 2 (done) |
 
 > exp2's 4B used `Qwen3-4B-Thinking-2507`; exp3 uses **base** `Qwen3-4B` for a clean
 > same-lineage curve, so the 4B point is re-trained here (cheap).
@@ -34,7 +34,11 @@ Per size we run **two evals**, both WITH the v2 skill in the system prompt:
 - **SFT data**: exp2's `sft_skill_{train,val}.jsonl` verbatim (skill-teacher targets,
   v2 skill in the student system prompt). Same data on every base.
 - **Engine**: `matchmaker/training/train_sft.py` (LoRA all-linear r16, `assistant_only_loss`,
-  `max_seq=12288`), wrapped by `train_modal.py`.
+  `max_seq=12288`), wrapped by `train_modal.py`. ≤14B trains single-GPU (bf16, `device_map`);
+  **32B uses FSDP full-shard (ZeRO-3) bf16 LoRA on 2×H100** (`--fsdp`, `accelerate launch
+  --num_processes 2`) — same recipe, effective batch still 8 (per-rank `grad_accum=4` × 2),
+  so it stays on the same curve. 32B ships **adapter-only** (no 65GB merge in the GPU window);
+  eval serves base + LoRA via vLLM (numerically identical to a merged model).
 - **Eval set / judges / rubric**: held-out 60 (seed 42), `gpt-5.5 + gemini-3.1-pro +
   deepseek-v4-pro`, 9-dim rubric — identical to exp1/exp2, so all numbers are comparable.
 - **Inference**: vLLM, FlashAttention-2 backend (`VLLM_ATTENTION_BACKEND=FLASH_ATTN`,
@@ -74,6 +78,13 @@ modal run --detach experiments/exp3_scaling_law/train_modal.py::one --size 14B  
 modal run experiments/exp3_scaling_law/eval_modal.py::sweep --sizes 0.6B,1.7B,4B,8B,14B
 # 3) score + scaling table (local, 3-judge)
 python experiments/exp3_scaling_law/score.py --sizes 0.6B,1.7B,4B,8B,14B
+
+# --- 32B (FSDP on 2×H100) ---
+modal run experiments/exp3_scaling_law/train_modal.py::stage  --size 32B   # CPU prestage weights → volume (no GPU)
+modal run experiments/exp3_scaling_law/train_modal.py::smoke  --size 32B   # 2-step FSDP smoke on 2×H100 (validate before full)
+modal run experiments/exp3_scaling_law/train_modal.py::one    --size 32B   # full FSDP run, adapter-only
+modal run experiments/exp3_scaling_law/eval_modal.py::sweep   --sizes 32B  # vLLM TP=2; student = base + LoRA adapter
+python experiments/exp3_scaling_law/score.py --sizes 32B                   # merges into scaling_summary.json
 ```
 
 ## Layout
@@ -87,34 +98,54 @@ results/         gen_{size}_{mode}_outputs.jsonl, judge_{size}_{mode}.jsonl, sca
 ```
 
 ## Status
-Pipeline validated end-to-end; **0.6B–14B complete**, 32B pending (needs Modal top-up).
+Pipeline validated end-to-end; **0.6B–32B complete — all 6 points**.
 Results (held-out 60, **base Qwen3 dense, same lineage**, with-skill):
 
-| size | baseline | student | **lift** | parse (s/b) |
+| size | baseline | student | **lift** | scored n/60 (stu / base) |
 |---|---|---|---|---|
-| 0.6B | 1.481 | 1.724 | +0.243 | 50/59 |
-| 1.7B | 1.819 | 2.559 | +0.740 | 59/56 |
-| **4B** | 2.271 | 3.307 | **+1.036** | 59/56 |
-| 8B | 2.684 | 3.596 | +0.912 | 60/60 |
-| 14B | 2.877 | 3.762 | +0.885 | 60/60 |
+| 0.6B | 1.481 | 1.724 | +0.243 | 50 / 59 |
+| 1.7B | 1.819 | 2.559 | +0.740 | 59 / 56 |
+| **4B** | 2.271 | 3.307 | +1.036 | 59 / 56 |
+| 8B | 2.684 | 3.596 | +0.912 | 60 / 60 |
+| 14B | 2.877 | 3.762 | +0.885 | 60 / 60 |
+| **32B** | 2.905 | 4.127 | **+1.222** | 60 / 60 |
 
-**Headline: the distillation lift is an inverted-U in model size — it peaks at 4B (+1.04)
-then declines monotonically through 8B (+0.91) and 14B (+0.89).**
+**Headline: the distillation lift is NON-MONOTONIC in size — the earlier "inverted-U" is
+overturned by 32B.** Through 14B the lift looked like a clean inverted-U (peak 4B +1.04, then
+8B +0.91, 14B +0.89). **32B breaks it: lift = +1.22, above the 4B peak** — the lift does not
+keep tapering with size.
+
 - Small (0.6B): model too weak to exploit the skill-distilled data → small lift.
-- Mid (4B): strong enough to absorb it while its baseline is still weak → max lift.
-- Large (8B+): the baseline keeps catching up (baseline 2.27→2.68→2.88 over 4B→8B→14B) →
-  the model exploits the skill from the prompt alone, needs the distillation less → lift declines.
+- Mid (4B): strong enough to absorb it while its baseline is still weak → local peak.
+- 8B–14B: baseline catches up (2.27→2.68→2.88), lift dips/plateaus (+1.04→+0.91→+0.89) —
+  the stretch that *looked* like a post-peak decline.
+- 32B: the **baseline plateaus** (14B→32B: 2.877→2.905, +0.03) while the **student jumps**
+  (3.762→4.127, +0.365) → lift widens to +1.22. The big model exploits the distilled data
+  *more*, not less, because its in-context baseline has stopped improving.
 
-The 14B point confirms the post-peak decline is real (not 8B noise): two consecutive
-post-peak drops, +1.036 → +0.912 → +0.885. 32B (needs QLoRA or 2×H100 bf16) would test
-whether it keeps tapering or plateaus.
+**Shape is underdetermined — don't overclaim.** Two readings fit the 6 points: (a) *peak–dip–
+peak* (genuine non-monotonicity), or (b) *lift broadly rises with log-params*, with 8B–14B a
+closely-spaced near-plateau that only looks like a dip. The x-axis is uneven: **14B→32B is a
+~2.3× parameter jump** (second-biggest step on the curve) vs only ~1.75× for 8B→14B, so part
+of the 32B rise is simply a bigger step along size — the reversal may be less abrupt than the
+table suggests. A point near ~20–24B and/or repeat seeds would separate (a) from (b). With 6
+unevenly-spaced points and one seed we report only: **the lift is not an inverted-U; it
+exceeds the 4B peak at 32B; the exact curve shape is open.**
 
-(An earlier 3-point read [0.6/1.7/8B] looked monotonic; the clean **base** 4B point revealed
-the peak. exp2's 4B was `Qwen3-4B-Thinking-2507` — off-lineage, used only as a side-reference,
-not on this curve.)
+(An earlier 3-point read [0.6/1.7/8B] looked monotonic; the clean **base** 4B point revealed a
+local peak; 14B looked like a confirmed decline; 32B overturned it. exp2's 4B was
+`Qwen3-4B-Thinking-2507` — off-lineage, side-reference only, not on this curve.)
 
-Parse reliability also rises with size (0.6B 50/60 → 8B 60/60). Caveat: unequal parse counts
-(student vs baseline) → mild survivorship bias; TODO intersection-only scoring.
+**Reading the "scored n/60" column.** Each model's score is averaged over *only* the cases
+whose output parsed to valid JSON; unparseable outputs are dropped before scoring. Two
+consequences:
+1. **Parse rate is itself a quality signal** — it rises with size (0.6B 50/60 → every point
+   ≥8B is 60/60): small models fail the strict output format more often.
+2. **Survivorship bias at the small end** — when student and baseline parse *different* subsets
+   (e.g. 0.6B: 50 vs 59), their averages aren't over the same cases, so the 0.6B–4B lifts are
+   the least clean. Every point **8B–32B is 60/60** (full, identical subsets) → the upper half
+   of the curve, including the 32B reversal, is bias-free. TODO: intersection-only scoring to
+   clean the small-size points.
 
 Three bugs the 0.6B smoke caught & fixed: sibling `config.py` → `add_local_python_source`;
 12K×151K-vocab logits OOM → `batch_size=1` (later solved properly by the **Liger** fused

@@ -91,7 +91,7 @@ app = modal.App("exp3-scaling-train", image=image)
 def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
                 batch_size: int, grad_accum: int, lr: float, save_steps: int,
                 smoke: bool = False, device_map: str = "single",
-                save_merged: bool = True):
+                save_merged: bool = True, fsdp: bool = False, nproc: int = 1):
     import os
     import subprocess
     import sys
@@ -118,8 +118,15 @@ def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
                           ignore_patterns=["*.pth", "*.gguf", "original/*"])
         vol.commit()
 
-    cmd = [
-        sys.executable, "/root/train_sft.py",
+    # FSDP needs one process per GPU → accelerate launch. Naive-MP / single → plain python.
+    if fsdp:
+        launch = [sys.executable, "-m", "accelerate.commands.launch",
+                  "--num_processes", str(nproc), "--num_machines", "1",
+                  "--mixed_precision", "bf16", "/root/train_sft.py"]
+    else:
+        launch = [sys.executable, "/root/train_sft.py"]
+
+    cmd = launch + [
         "--base", local_base,
         "--train", "/root/data/sft_skill_train.jsonl",
         "--val", "/root/data/sft_skill_val.jsonl",
@@ -129,15 +136,25 @@ def _train_impl(size: str, hf_id: str, epochs: float, max_seq: int,
         "--lr", str(lr), "--save-steps", str(save_steps),
         "--resume",
     ]
-    if device_map != "single":
+    if fsdp:
+        cmd.append("--fsdp")
+    elif device_map != "single":
         cmd += ["--device-map", device_map]   # auto = naive MP across the visible GPUs
     if save_merged:
         cmd.append("--save-merged")
     if smoke:
         cmd.append("--smoke")          # 2 steps / 4 samples; --save-merged self-guards off
+
+    env = os.environ.copy()
+    if fsdp:
+        # accelerate launch (the parent) must see these BEFORE it execs train_sft.py,
+        # so it picks the FSDP distributed type and transformers loads ram-efficiently.
+        env["ACCELERATE_USE_FSDP"] = "true"
+        env["FSDP_CPU_RAM_EFFICIENT_LOADING"] = "true"
+
     print(f"[train:{size}] {' '.join(cmd)}")
     try:
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=True, env=env)
     finally:
         vol.commit()          # persist checkpoints even on failure → step-level resume
     print(f"[train:{size}] done → volume:{VOLUME} /outputs/{run_name}")
@@ -170,15 +187,16 @@ def train_80(size: str, hf_id: str, smoke: bool = False, **kw):
 
 @app.function(gpu="H100:2", volumes={"/models": vol}, secrets=[hf_secret], timeout=6 * 3600, retries=2)
 def train_h100x2(size: str, hf_id: str, smoke: bool = False, **kw):
-    # 32B bf16 LoRA: ~64GB weights don't fit one 80GB card, so split layers across
-    # 2×H100 via naive model-parallel (--device-map auto). batch_size=1 / grad_accum=8
-    # keeps the effective batch at 8 (one pipeline; n_gpu is NOT a batch multiplier
-    # under model-parallel). Save adapter only — no 65GB merge in the 2-GPU window,
-    # and no fragile merge_and_unload across a sharded model. Eval mounts the LoRA.
+    # 32B bf16 LoRA via FSDP full-shard (ZeRO-3) across 2×H100: shards the frozen
+    # base AND data-parallels (both cards compute) → ~2x over naive MP. Effective
+    # batch = batch_size(1) × grad_accum(4) × nproc(2) = 8 → comparable to the other
+    # points (grad_accum is PER-RANK under FSDP, hence 4 not 8). Save adapter only —
+    # no 65GB merge in the 2-GPU window; eval mounts the LoRA.
+    # Fallback if FSDP misbehaves: device_map="auto", save_merged=False (naive MP).
     kw.setdefault("batch_size", 1)
-    kw.setdefault("grad_accum", 8)
+    kw.setdefault("grad_accum", 4)
     return _train_impl(size, hf_id, smoke=smoke,
-                       device_map="auto", save_merged=False, **_common(**kw))
+                       fsdp=True, nproc=2, save_merged=False, **_common(**kw))
 
 
 def _fn_for(gpu: str):
