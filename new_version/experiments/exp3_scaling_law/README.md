@@ -23,8 +23,8 @@ Per size we run **two evals**, both WITH the v2 skill in the system prompt:
 | 1.7B | `Qwen/Qwen3-1.7B` | A100-40GB | 1 |
 | 4B | `Qwen/Qwen3-4B` | A100-40GB | 1 |
 | 8B | `Qwen/Qwen3-8B` | A100-80GB | 1 |
-| 14B | `Qwen/Qwen3-14B` | A100-80GB | 2 (after top-up) |
-| 32B | `Qwen/Qwen3-32B` | H100:2 (FSDP) | 2 (done) |
+| 14B | `Qwen/Qwen3-14B` | A100-80GB | 2 |
+| 32B | `Qwen/Qwen3-32B` | H100:2 (FSDP) | 2 |
 
 > exp2's 4B used `Qwen3-4B-Thinking-2507`; exp3 uses **base** `Qwen3-4B` for a clean
 > same-lineage curve, so the 4B point is re-trained here (cheap).
